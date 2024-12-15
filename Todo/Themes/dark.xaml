@@ -1,0 +1,159 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:system="clr-namespace:System;assembly=mscorlib">
+  <Color x:Key="ColorPrimary">#FF4772FA</Color>
+  <Color x:Key="MainWindow">#2D2D2F</Color>
+  <Color x:Key="TextPrimaryColor">#FFFFFF</Color>
+  <SolidColorBrush x:Key="PrimaryColor" Color="{DynamicResource ColorPrimary}"/>
+  <Color x:Key="LeftBarBackColorTop">#000000</Color>
+  <Color x:Key="LeftBarBackColorBottom">#000000</Color>
+  <Color x:Key="MaskStartColor">#00191919</Color>
+  <Color x:Key="MaskEndColor">#FF191919</Color>
+  <SolidColorBrush x:Key="LightBorderColor" Color="Transparent"/>
+  <SolidColorBrush x:Key="DarkBorderColor" Color="{DynamicResource white_10}"/>
+  <Color x:Key="LeftBarIconColor">#FFFFFF</Color>
+  <Color x:Key="ProjectMenuBaseColor">#FFFFFF</Color>
+  <SolidColorBrush x:Key="ProjectPinBackColor" Color="{StaticResource white_24}"/>
+  <SolidColorBrush x:Key="LeftBarColorOpacity100" Color="{DynamicResource LeftBarIconColor}"/>
+  <SolidColorBrush x:Key="LeftBarSelectedIconColor" Color="{DynamicResource ColorPrimary}"/>
+  <SolidColorBrush x:Key="LeftBarColorOpacity90" Color="{DynamicResource LeftBarIconColor}" Opacity="0.9"/>
+  <SolidColorBrush x:Key="LeftBarColorOpacity80" Color="{StaticResource white_80}"/>
+  <SolidColorBrush x:Key="LeftBarColorOpacity60" Color="{StaticResource white_60}"/>
+  <SolidColorBrush x:Key="LeftBarColorOpacity40" Color="{StaticResource white_40}"/>
+  <SolidColorBrush x:Key="LeftBarColorOpacity10" Color="{StaticResource white_10}"/>
+  <SolidColorBrush x:Key="LeftBarColorOpacity20" Color="{StaticResource white_20}"/>
+  <SolidColorBrush x:Key="LeftBarColorOpacity100_80" Color="{StaticResource white_80}"/>
+  <SolidColorBrush x:Key="ProjectMenuColorOpacity40" Color="{DynamicResource ProjectMenuBaseColor}" Opacity="0.4"/>
+  <SolidColorBrush x:Key="ProjectMenuColorOpacity60" Color="{DynamicResource ProjectMenuBaseColor}" Opacity="0.6"/>
+  <SolidColorBrush x:Key="ProjectMenuColorOpacity60_40" Color="{DynamicResource ProjectMenuBaseColor}" Opacity="0.4"/>
+  <SolidColorBrush x:Key="ProjectMenuColorOpacity80" Color="{DynamicResource ProjectMenuBaseColor}" Opacity="0.8"/>
+  <SolidColorBrush x:Key="ProjectMenuColorOpacity100_80" Color="{DynamicResource ProjectMenuBaseColor}" Opacity="0.8"/>
+  <SolidColorBrush x:Key="ProjectMenuColorOpacity5" Color="{DynamicResource ProjectMenuBaseColor}" Opacity="0.05"/>
+  <SolidColorBrush x:Key="ProjectMenuIconColor" Color="{DynamicResource ProjectMenuBaseColor}" Opacity="0.8"/>
+  <SolidColorBrush x:Key="ProjectSectionColor" Color="{DynamicResource ProjectMenuBaseColor}" Opacity="0.3"/>
+  <SolidColorBrush x:Key="BaseColorOpacity100" Color="White"/>
+  <SolidColorBrush x:Key="BaseColorOpacity90" Color="{StaticResource white_90}"/>
+  <SolidColorBrush x:Key="BaseColorOpacity80" Color="{StaticResource white_80}"/>
+  <SolidColorBrush x:Key="BaseColorOpacity60" Color="{StaticResource white_60}"/>
+  <SolidColorBrush x:Key="BaseColorOpacity40" Color="{StaticResource white_40}"/>
+  <SolidColorBrush x:Key="BaseColorOpacity20" Color="{StaticResource white_20}"/>
+  <SolidColorBrush x:Key="BaseColorOpacity10" Color="{StaticResource white_10}"/>
+  <SolidColorBrush x:Key="BaseColorOpacity8" Color="{StaticResource white_08}"/>
+  <SolidColorBrush x:Key="BaseColorOpacity5" Color="{StaticResource white_05}"/>
+  <SolidColorBrush x:Key="BaseColorOpacity4" Color="White" Opacity="0.04"/>
+  <SolidColorBrush x:Key="BaseColorOpacity3" Color="White" Opacity="0.03"/>
+  <SolidColorBrush x:Key="BaseColorOpacity2" Color="White" Opacity="0.02"/>
+  <SolidColorBrush x:Key="BaseSolidColorOpacity80" Color="{StaticResource white_80}"/>
+  <SolidColorBrush x:Key="BaseSolidColorOpacity70" Color="{StaticResource white_70}"/>
+  <SolidColorBrush x:Key="BaseSolidColorOpacity60" Color="{StaticResource white_60}"/>
+  <SolidColorBrush x:Key="BaseSolidColorOpacity50" Color="{StaticResource white_50}"/>
+  <SolidColorBrush x:Key="BaseSolidColorOpacity40" Color="{StaticResource white_40}"/>
+  <SolidColorBrush x:Key="BaseSolidColorOpacity20" Color="{StaticResource white_20}"/>
+  <SolidColorBrush x:Key="BaseSolidColorOpacity10" Color="{StaticResource white_10}"/>
+  <SolidColorBrush x:Key="BaseSolidColorOpacity5" Color="{StaticResource white_05}"/>
+  <SolidColorBrush x:Key="BaseInvColorOpacity90" Color="{DynamicResource dark_90}"/>
+  <SolidColorBrush x:Key="BaseColorOpacity0_10" Color="{DynamicResource white_10}"/>
+  <SolidColorBrush x:Key="BaseColorOpacity0_5" Color="{StaticResource white_05}"/>
+  <SolidColorBrush x:Key="BaseColorOpacity10_0" Color="Transparent"/>
+  <SolidColorBrush x:Key="BaseColorOpacity5_10" Color="{DynamicResource white_10}"/>
+  <SolidColorBrush x:Key="BaseColorOpacity5_20" Color="{DynamicResource white_20}"/>
+  <SolidColorBrush x:Key="BaseColorOpacity10_5" Color="{DynamicResource white_05}"/>
+  <SolidColorBrush x:Key="BaseColorOpacity10_20" Color="{DynamicResource white_20}"/>
+  <SolidColorBrush x:Key="BaseColorOpacity100_80" Color="{DynamicResource white_80}"/>
+  <SolidColorBrush x:Key="BaseColorOpacity80_60" Color="{DynamicResource white_60}"/>
+  <SolidColorBrush x:Key="BaseColorOpacity40_20" Color="{DynamicResource white_20}"/>
+  <SolidColorBrush x:Key="BaseColorOpacity20_40" Color="{DynamicResource white_40}"/>
+  <SolidColorBrush x:Key="PrimaryColor10" Color="#1A4772FA"/>
+  <SolidColorBrush x:Key="PrimaryColor5" Color="#0C4772FA"/>
+  <SolidColorBrush x:Key="PrimaryColor30" Color="#4C4772FA"/>
+  <SolidColorBrush x:Key="PrimaryColor60" Color="#994772FA"/>
+  <SolidColorBrush x:Key="PrimaryColor80" Color="#CC4772FA"/>
+  <SolidColorBrush x:Key="DateRangeSelectColor" Color="{DynamicResource white}" Opacity="0.05"/>
+  <SolidColorBrush x:Key="TextInverseColor" Color="{StaticResource black}"/>
+  <SolidColorBrush x:Key="TextInverseColor80" Color="{StaticResource black_80}"/>
+  <SolidColorBrush x:Key="TextInverseColor100_70" Color="{StaticResource black_70}"/>
+  <SolidColorBrush x:Key="TextAccentColor" Color="{Binding Color, Source={StaticResource PrimaryColor}}"/>
+  <SolidColorBrush x:Key="ProjectIconTextColor" Color="{DynamicResource MainWindow}"/>
+  <SolidColorBrush x:Key="DialogBackground" Color="{StaticResource color_#212121}"/>
+  <SolidColorBrush x:Key="BatchSelectBackground" Color="{StaticResource white_05}"/>
+  <SolidColorBrush x:Key="ThemeCheckBorderColor" Color="#323232"/>
+  <SolidColorBrush x:Key="ShowAreaBackground" Color="{StaticResource color_#1E1E1E}"/>
+  <SolidColorBrush x:Key="FoldAreaBackground" Color="{StaticResource color_#1E1E1E}"/>
+  <SolidColorBrush x:Key="TimelineContainerBackground" Color="{StaticResource color_#1E1E1E}"/>
+  <Color x:Key="TimelineContainerBackgroundColor">#1E1E1E</Color>
+  <Color x:Key="TimelineContainerBackgroundStepToColor">#001E1E1E</Color>
+  <SolidColorBrush x:Key="PopupBackground" Color="#2B2B2B"/>
+  <SolidColorBrush x:Key="WindowBackgroundPrimary" Color="{StaticResource color_#212121}"/>
+  <SolidColorBrush x:Key="WindowBackgroundSecondary" Color="{StaticResource color_#1E1E1E}"/>
+  <SolidColorBrush x:Key="WindowBackground" Color="Black"/>
+  <SolidColorBrush x:Key="SmallFocusBackground" Color="{StaticResource black_40}"/>
+  <SolidColorBrush x:Key="WindowBorderBackground" Color="Transparent"/>
+  <SolidColorBrush x:Key="TemplateHoverColor" Color="#3E3E3E"/>
+  <SolidColorBrush x:Key="TimerDetailDayPopupColor" Color="#3E3E3E"/>
+  <SolidColorBrush x:Key="DateColorPrimary" Color="{DynamicResource ColorPrimary}"/>
+  <SolidColorBrush x:Key="ScrollBarColor" Color="{StaticResource white_12}"/>
+  <SolidColorBrush x:Key="QuickAddBackground" Color="{StaticResource black_60}"/>
+  <SolidColorBrush x:Key="QuickAddBorder" Color="{StaticResource black_60}"/>
+  <SolidColorBrush x:Key="ButtonBorderPrimary" Color="Transparent"/>
+  <SolidColorBrush x:Key="MainBackground" Color="#1A1A1A"/>
+  <SolidColorBrush x:Key="ShowProjectBackground" Color="#1A1A1A"/>
+  <SolidColorBrush x:Key="AudioBackgroundColor" Color="#4772FA" Opacity="0.1"/>
+  <SolidColorBrush x:Key="VideoBackgroundColor" Color="#2166F3" Opacity="0.1"/>
+  <SolidColorBrush x:Key="PdfBackgroundColor" Color="#E66E72" Opacity="0.1"/>
+  <SolidColorBrush x:Key="TxtBackgroundColor" Color="#607D8B" Opacity="0.1"/>
+  <SolidColorBrush x:Key="DocBackgroundColor" Color="#2196F3" Opacity="0.1"/>
+  <SolidColorBrush x:Key="XlsBackgroundColor" Color="#3BDB83" Opacity="0.1"/>
+  <SolidColorBrush x:Key="PptBackgroundColor" Color="#F57534" Opacity="0.1"/>
+  <SolidColorBrush x:Key="OtherBackgroundColor" Color="#4772FA" Opacity="0.1"/>
+  <SolidColorBrush x:Key="CsvBackgroundColor" Color="#9CCD2B" Opacity="0.1"/>
+  <SolidColorBrush x:Key="ZipBackgroundColor" Color="#C735E9" Opacity="0.1"/>
+  <SolidColorBrush x:Key="AudioBorderColor" Color="Transparent"/>
+  <SolidColorBrush x:Key="VideoBorderColor" Color="Transparent"/>
+  <SolidColorBrush x:Key="PdfBorderColor" Color="Transparent"/>
+  <SolidColorBrush x:Key="TxtBorderColor" Color="Transparent"/>
+  <SolidColorBrush x:Key="DocBorderColor" Color="Transparent"/>
+  <SolidColorBrush x:Key="XlsBorderColor" Color="Transparent"/>
+  <SolidColorBrush x:Key="PptBorderColor" Color="Transparent"/>
+  <SolidColorBrush x:Key="OtherBorderColor" Color="Transparent"/>
+  <SolidColorBrush x:Key="CsvBorderColor" Color="Transparent"/>
+  <SolidColorBrush x:Key="ZipBorderColor" Color="Transparent"/>
+  <SolidColorBrush x:Key="CalendarButtonSelectedColor" Color="{DynamicResource ColorPrimary}" Opacity="0.20"/>
+  <system:Double x:Key="CalendarTitleDoneOpacity">0.2</system:Double>
+  <system:Boolean x:Key="IsDarkTheme">True</system:Boolean>
+  <SolidColorBrush x:Key="CalendarShadowGridColor" Color="Transparent"/>
+  <SolidColorBrush x:Key="KanbanTaskItemBackground" Color="{StaticResource white_04}"/>
+  <SolidColorBrush x:Key="KanbanQuickAddBackground" Color="{StaticResource white_06}"/>
+  <SolidColorBrush x:Key="KanbanColumnBackground" Color="#222222"/>
+  <SolidColorBrush x:Key="QuadrantBackground" Color="{StaticResource white_02}"/>
+  <SolidColorBrush x:Key="WidgetQuadrantBackground" Color="{StaticResource white_05}"/>
+  <SolidColorBrush x:Key="TaskDragPopupBackground" Color="White" Opacity="0.09"/>
+  <SolidColorBrush x:Key="KanbanItemColor" Color="Transparent"/>
+  <SolidColorBrush x:Key="KanbanContainerColor" Color="Transparent"/>
+  <SolidColorBrush x:Key="MatrixContainerColor" Color="Transparent"/>
+  <SolidColorBrush x:Key="PopupBorderPrimary" Color="{StaticResource white_24}"/>
+  <SolidColorBrush x:Key="EmptyPathColor" Color="#ABABAB"/>
+  <SolidColorBrush x:Key="CodeBackground" Color="#272829"/>
+  <SolidColorBrush x:Key="PomoProgressBackGround" Color="#FF141414"/>
+  <SolidColorBrush x:Key="ItemSelectedColor" Color="{StaticResource white_18}"/>
+  <SolidColorBrush x:Key="TaskItemHoverColor" Color="{StaticResource white_10}"/>
+  <SolidColorBrush x:Key="TaskDragBorderColor" Color="{StaticResource white_20}"/>
+  <SolidColorBrush x:Key="ItemHoverColor" Color="{StaticResource white_10}"/>
+  <Color x:Key="ProjectHoverColor">#0FFFFFFF</Color>
+  <SolidColorBrush x:Key="ProjectHoverBackGround" Color="{DynamicResource ProjectHoverColor}"/>
+  <SolidColorBrush x:Key="ProjectSelectedBackground" Color="#29FFFFFF"/>
+  <SolidColorBrush x:Key="TextBoxBackground" Color="{StaticResource white_08}"/>
+  <SolidColorBrush x:Key="MarkdownHighlightColor" Color="{DynamicResource markdown_highlight_dark}"/>
+  <BitmapImage x:Key="MarkdownLink" UriSource="../../Assets/md_link_dark.png"/>
+  <BitmapImage x:Key="MarkdownChecked" UriSource="../../Assets/md_checked_dark.png"/>
+  <BitmapImage x:Key="MarkdownUnChecked" UriSource="../../Assets/md_unchecked_dark.png"/>
+  <SolidColorBrush x:Key="MarkDownQuoteColor" Color="#6F6F6F"/>
+  <SolidColorBrush x:Key="MainWindowBorderColor" Color="#002C2C2C"/>
+  <SolidColorBrush x:Key="ToolTipTopColor" Color="{StaticResource white_20}"/>
+  <SolidColorBrush x:Key="ToolTipBackColor" Color="{StaticResource black_80}"/>
+  <system:Double x:Key="ProjectShadowOpacity">0.3</system:Double>
+  <SolidColorBrush x:Key="ProjectMenuBackGround" Color="Transparent"/>
+  <Color x:Key="TimelineDayLineColor">#E03131</Color>
+  <SolidColorBrush x:Key="TabBorderColor" Color="{DynamicResource ColorPrimary}"/>
+  <SolidColorBrush x:Key="GroupTitleSelectColor" Color="{StaticResource white_10}"/>
+  <SolidColorBrush x:Key="GroupTitleBackColor" Color="{StaticResource black}"/>
+</ResourceDictionary>

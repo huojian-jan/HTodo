@@ -1,0 +1,306 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Page Remove="resource\colorresource.xaml" />
+    <Page Remove="resource\fontresource\fontfamily975maru.xaml" />
+    <Page Remove="resource\fontresource\fontfamilynormal.xaml" />
+    <Page Remove="resource\fontresource\fontfamilysourcehansans.xaml" />
+    <Page Remove="resource\fontresource\fontfamilyyahei.xaml" />
+    <Page Remove="resource\fontresource\fontfamilyyozai.xaml" />
+    <Page Remove="resource\fontresource\font_large.xaml" />
+    <Page Remove="resource\fontresource\font_middle.xaml" />
+    <Page Remove="resource\fontresource\font_normal.xaml" />
+    <Page Remove="resource\icons_dark.xaml" />
+    <Page Remove="resource\icons_light.xaml" />
+    <Page Remove="resource\icons_pink.xaml" />
+    <Page Remove="resource\pomoicons.xaml" />
+    <Page Remove="resource\sidebar.xaml" />
+    <Page Remove="resource\stringresource\string.d.en-us.xaml" />
+    <Page Remove="resource\stringresource\string.d.zh-cn.xaml" />
+    <Page Remove="resource\stringresource\string.d.zh-tw.xaml" />
+    <Page Remove="resource\svgresource.xaml" />
+    <Page Remove="resource\tasklist.xaml" />
+    <Page Remove="resource\themes\autumn.xaml" />
+    <Page Remove="resource\themes\beijing.xaml" />
+    <Page Remove="resource\themes\birds.xaml" />
+    <Page Remove="resource\themes\black.xaml" />
+    <Page Remove="resource\themes\blacksea.xaml" />
+    <Page Remove="resource\themes\blossom.xaml" />
+    <Page Remove="resource\themes\blue.xaml" />
+    <Page Remove="resource\themes\cairo.xaml" />
+    <Page Remove="resource\themes\colorbase.xaml" />
+    <Page Remove="resource\themes\colorderived.xaml" />
+    <Page Remove="resource\themes\custom.xaml" />
+    <Page Remove="resource\themes\dark.xaml" />
+    <Page Remove="resource\themes\dawn.xaml" />
+    <Page Remove="resource\themes\default.xaml" />
+    <Page Remove="resource\themes\desert.xaml" />
+    <Page Remove="resource\themes\detailpopup.xaml" />
+    <Page Remove="resource\themes\frozen.xaml" />
+    <Page Remove="resource\themes\gray.xaml" />
+    <Page Remove="resource\themes\green.xaml" />
+    <Page Remove="resource\themes\guangzhou.xaml" />
+    <Page Remove="resource\themes\hangzhou.xaml" />
+    <Page Remove="resource\themes\leaves.xaml" />
+    <Page Remove="resource\themes\light.xaml" />
+    <Page Remove="resource\themes\lightnecessarycolor.xaml" />
+    <Page Remove="resource\themes\london.xaml" />
+    <Page Remove="resource\themes\losangeles.xaml" />
+    <Page Remove="resource\themes\meadow.xaml" />
+    <Page Remove="resource\themes\moscow.xaml" />
+    <Page Remove="resource\themes\newyork.xaml" />
+    <Page Remove="resource\themes\pink.xaml" />
+    <Page Remove="resource\themes\probase.xaml" />
+    <Page Remove="resource\themes\sanfrancisco.xaml" />
+    <Page Remove="resource\themes\seoul.xaml" />
+    <Page Remove="resource\themes\shanghai.xaml" />
+    <Page Remove="resource\themes\shenzhen.xaml" />
+    <Page Remove="resource\themes\silence.xaml" />
+    <Page Remove="resource\themes\spring.xaml" />
+    <Page Remove="resource\themes\structure.xaml" />
+    <Page Remove="resource\themes\summer.xaml" />
+    <Page Remove="resource\themes\sydney.xaml" />
+    <Page Remove="resource\themes\tokyo.xaml" />
+    <Page Remove="resource\themes\white.xaml" />
+    <Page Remove="resource\themes\winter.xaml" />
+    <Page Remove="resource\themes\yellow.xaml" />
+    <Page Remove="resource\widgetstyle.xaml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Caliburn.Micro" Version="4.0.212" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Todo.Asset\Todo.Asset.csproj" />
+    <ProjectReference Include="..\Todo.Protocol\Todo.Protocol.csproj" />
+    <ProjectReference Include="..\WPF.Common\WPF.Common.csproj" />
+    <ProjectReference Include="..\wpf_controls\ControlToolKits.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Themes\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="resource\colorresource.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Resource>
+    <Resource Include="resource\fontresource\fontfamily975maru.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Resource>
+    <Resource Include="resource\fontresource\fontfamilynormal.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Resource>
+    <Resource Include="resource\fontresource\fontfamilysourcehansans.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Resource>
+    <Resource Include="resource\fontresource\fontfamilyyahei.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Resource>
+    <Resource Include="resource\fontresource\fontfamilyyozai.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Resource>
+    <Resource Include="resource\fontresource\font_large.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Resource>
+    <Resource Include="resource\fontresource\font_middle.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Resource>
+    <Resource Include="resource\fontresource\font_normal.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Resource>
+    <Resource Include="resource\icons_dark.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Resource>
+    <Resource Include="resource\icons_light.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Resource>
+    <Resource Include="resource\icons_pink.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Resource>
+    <Resource Include="resource\pomoicons.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Resource>
+    <Resource Include="resource\sidebar.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Resource>
+    <Resource Include="resource\stringresource\string.d.en-us.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Resource>
+    <Resource Include="resource\stringresource\string.d.zh-cn.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Resource>
+    <Resource Include="resource\stringresource\string.d.zh-tw.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Resource>
+    <Resource Include="resource\svgresource.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Resource>
+    <Resource Include="resource\tasklist.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Resource>
+    <Resource Include="resource\themes\autumn.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Resource>
+    <Resource Include="resource\themes\beijing.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Resource>
+    <Resource Include="resource\themes\birds.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Resource>
+    <Resource Include="resource\themes\black.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Resource>
+    <Resource Include="resource\themes\blacksea.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Resource>
+    <Resource Include="resource\themes\blossom.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Resource>
+    <Resource Include="resource\themes\blue.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Resource>
+    <Resource Include="resource\themes\cairo.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Resource>
+    <Resource Include="resource\themes\colorbase.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Resource>
+    <Resource Include="resource\themes\colorderived.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Resource>
+    <Resource Include="resource\themes\custom.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Resource>
+    <Resource Include="resource\themes\dark.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Resource>
+    <Resource Include="resource\themes\dawn.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Resource>
+    <Resource Include="resource\themes\default.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Resource>
+    <Resource Include="resource\themes\desert.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Resource>
+    <Resource Include="resource\themes\detailpopup.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Resource>
+    <Resource Include="resource\themes\frozen.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Resource>
+    <Resource Include="resource\themes\gray.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Resource>
+    <Resource Include="resource\themes\green.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Resource>
+    <Resource Include="resource\themes\guangzhou.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Resource>
+    <Resource Include="resource\themes\hangzhou.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Resource>
+    <Resource Include="resource\themes\leaves.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Resource>
+    <Resource Include="resource\themes\light.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Resource>
+    <Resource Include="resource\themes\lightnecessarycolor.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Resource>
+    <Resource Include="resource\themes\london.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Resource>
+    <Resource Include="resource\themes\losangeles.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Resource>
+    <Resource Include="resource\themes\meadow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Resource>
+    <Resource Include="resource\themes\moscow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Resource>
+    <Resource Include="resource\themes\newyork.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Resource>
+    <Resource Include="resource\themes\pink.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Resource>
+    <Resource Include="resource\themes\probase.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Resource>
+    <Resource Include="resource\themes\sanfrancisco.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Resource>
+    <Resource Include="resource\themes\seoul.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Resource>
+    <Resource Include="resource\themes\shanghai.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Resource>
+    <Resource Include="resource\themes\shenzhen.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Resource>
+    <Resource Include="resource\themes\silence.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Resource>
+    <Resource Include="resource\themes\spring.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Resource>
+    <Resource Include="resource\themes\structure.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Resource>
+    <Resource Include="resource\themes\summer.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Resource>
+    <Resource Include="resource\themes\sydney.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Resource>
+    <Resource Include="resource\themes\tokyo.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Resource>
+    <Resource Include="resource\themes\white.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Resource>
+    <Resource Include="resource\themes\winter.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Resource>
+    <Resource Include="resource\themes\yellow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Resource>
+    <Resource Include="resource\widgetstyle.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Resource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="LocalizationResources\Strings.Designer.cs">
+      <DependentUpon>Strings.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="LocalizationResources\Strings.en-US.resx">
+      <Generator>public </Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="LocalizationResources\Strings.resx">
+      <LastGenOutput>Strings.Designer.cs</LastGenOutput>
+      <Generator>publicResXFileCodeGenerator</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+
+</Project>

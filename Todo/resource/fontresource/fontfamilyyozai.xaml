@@ -1,0 +1,6 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <FontWeight x:Key="BoldToMedium">Bold</FontWeight>
+  <FontWeight x:Key="NormalToBold">Bold</FontWeight>
+  <Thickness x:Key="TaskCellTimeMargin">0</Thickness>
+</ResourceDictionary>

@@ -1,0 +1,1931 @@
+﻿<Window x:Class="Todo.Views.LogIn.LogInView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:cal="http://www.caliburnproject.org"
+        xmlns:conv="clr-namespace:Todo.Conveter"
+        xmlns:resx="clr-namespace:Todo.LocalizationResources"
+        mc:Ignorable="d"
+        WindowStartupLocation="CenterScreen"
+        WindowStyle="None"
+        AllowsTransparency="True"
+        UseLayoutRounding="True"
+        FontFamily="Microsoft YaHei UI"
+        ShowInTaskbar="True"
+        Height="536" 
+        Width="820"
+        ResizeMode="NoResize">
+    <Window.Resources>
+        <ResourceDictionary>
+            <conv:TagCornerConverter x:Key="TagCornerConverter"/>
+            <DrawingImage
+				x:Key="TickLogoDrawingImage">
+                <DrawingImage.Drawing>
+                    <DrawingGroup
+						ClipGeometry="M0,0 L0,390 L390,390 L390,0 L0,0">
+                        <DrawingGroup.Transform>
+                            <TranslateTransform
+								X="0"
+								Y="6.9949666794855148E-05" />
+                        </DrawingGroup.Transform>
+                        <DrawingGroup
+							Opacity="1">
+                            <DrawingGroup
+								Opacity="1"
+								Transform="1,0,0,1,18,46">
+                                <GeometryDrawing
+									Brush="#FFFFB000"
+									Geometry="M390,390 M0,0 M148.124039,72.509967 L132.122722,91.968566 L170.01881,123.013628 C172.283907,124.872191 175.113353,125.875969 178.019119,125.875969 C178.453933,125.875969 178.890148,125.852885 179.326363,125.808117 C182.678847,125.458369 185.749856,123.783075 187.857412,121.155065 L255.830627,36.3662734 L236.154041,20.6247999 L176.159428,95.461153 L148.124039,72.509967" />
+                                <DrawingGroup
+									Opacity="1"
+									Transform="1,0,0,1,81.074578,0">
+                                    <DrawingGroup>
+                                        <DrawingGroup.OpacityMask>
+                                            <DrawingBrush
+												ViewportUnits="Absolute"
+												ViewboxUnits="Absolute"
+												Viewport="0,-6.99496667948551E-05,191.850570678711,191.662087771932"
+												Viewbox="0,-6.99496667948551E-05,191.850570678711,191.662087771932"
+												Stretch="Uniform"
+												TileMode="None">
+                                                <DrawingBrush.Drawing>
+                                                    <DrawingGroup>
+                                                        <GeometryDrawing
+															Brush="#FFFFFFFF"
+															Geometry="M0,0 L0,0 L191.8506,0 L191.8506,191.662 L0,191.662" />
+                                                    </DrawingGroup>
+                                                </DrawingBrush.Drawing>
+                                            </DrawingBrush>
+                                        </DrawingGroup.OpacityMask>
+                                        <DrawingGroup>
+                                            <DrawingGroup.OpacityMask>
+                                                <DrawingBrush
+													ViewportUnits="Absolute"
+													ViewboxUnits="Absolute"
+													Viewport="0,-6.99496667948551E-05,191.850570678711,191.662087771932"
+													Viewbox="0,-6.99496667948551E-05,191.850570678711,191.662087771932"
+													Stretch="Uniform"
+													TileMode="None">
+                                                    <DrawingBrush.Drawing>
+                                                        <DrawingGroup>
+                                                            <GeometryDrawing
+																Brush="#FFFFFFFF"
+																Geometry="M0,0 L0,0 L191.8506,0 L191.8506,191.662 L0,191.662" />
+                                                        </DrawingGroup>
+                                                    </DrawingBrush.Drawing>
+                                                </DrawingBrush>
+                                            </DrawingGroup.OpacityMask>
+                                            <GeometryDrawing
+												Brush="#FF4772FA"
+												Geometry="M390,390 M0,0 M95.925282,170.100038 C54.9329781,170.100038 21.5831885,136.783011 21.5831885,95.8309769 C21.5831885,54.878943 54.9329781,21.5619156 95.925282,21.5619156 L95.925282,-6.99496694E-05 C43.0319415,-6.99496694E-05 0,42.9895978 0,95.8309769 C0,148.672356 43.0319415,191.662024 95.925282,191.662024 C148.818623,191.662024 191.850564,148.672356 191.850564,95.8309769 L170.267376,95.8309769 C170.267376,136.783011 136.917586,170.100038 95.925282,170.100038" />
+                                        </DrawingGroup>
+                                    </DrawingGroup>
+                                </DrawingGroup>
+                                <GeometryDrawing
+									Brush="#FF4772FA"
+									Geometry="M390,390 M0,0 M279.029491,289.167805 C267.928065,289.167805 258.876779,280.210051 258.876779,269.115334 C258.876779,258.022016 267.622084,248.99571 278.978377,248.99571 L278.978377,241.385186 C263.671643,241.385186 251.258772,253.79146 251.258772,269.081058 C251.258772,284.372756 263.743762,296.778329 279.046295,296.778329 C294.351629,296.778329 306.805111,283.777484 306.805111,268.979631 L299.187104,268.979631 C299.187104,280.324768 290.133717,289.167805 279.029491,289.167805" />
+                                <GeometryDrawing
+									Brush="#FF4772FA"
+									Geometry="M390,390 M0,0 M244.9085,233.9565 L244.9085,233.9565 L244.9085,227.0503 L177.7559,227.0503 L177.7559,233.9565 L207.8758,233.9565 L207.8758,296.6034 L215.2823,296.6034 L215.2823,233.9565" />
+                                <DrawingGroup>
+                                    <DrawingGroup.OpacityMask>
+                                        <DrawingBrush
+											ViewportUnits="Absolute"
+											ViewboxUnits="Absolute"
+											Viewport="312.060302734375,227.05029296875,7.90020751953125,69.5531005859375"
+											Viewbox="312.060302734375,227.05029296875,7.90020751953125,69.5531005859375"
+											Stretch="Uniform"
+											TileMode="None">
+                                            <DrawingBrush.Drawing>
+                                                <DrawingGroup>
+                                                    <GeometryDrawing
+														Brush="#FFFFFFFF"
+														Geometry="M0,297 L0,297 L354,297 L354,0 L0,0" />
+                                                </DrawingGroup>
+                                            </DrawingBrush.Drawing>
+                                        </DrawingBrush>
+                                    </DrawingGroup.OpacityMask>
+                                    <DrawingGroup>
+                                        <DrawingGroup.OpacityMask>
+                                            <DrawingBrush
+												ViewportUnits="Absolute"
+												ViewboxUnits="Absolute"
+												Viewport="312.060302734375,227.05029296875,7.90020751953125,69.5531005859375"
+												Viewbox="312.060302734375,227.05029296875,7.90020751953125,69.5531005859375"
+												Stretch="Uniform"
+												TileMode="None">
+                                                <DrawingBrush.Drawing>
+                                                    <DrawingGroup>
+                                                        <GeometryDrawing
+															Brush="#FFFFFFFF"
+															Geometry="M0,297 L0,297 L354,297 L354,0 L0,0" />
+                                                    </DrawingGroup>
+                                                </DrawingBrush.Drawing>
+                                            </DrawingBrush>
+                                        </DrawingGroup.OpacityMask>
+                                        <GeometryDrawing
+											Brush="#FF4772FA"
+											Geometry="M390,390 M0,0 M312.0603,296.6034 L312.0603,296.6034 L319.9605,296.6034 L319.9605,227.0503 L312.0603,227.0503" />
+                                    </DrawingGroup>
+                                </DrawingGroup>
+                                <DrawingGroup>
+                                    <DrawingGroup.OpacityMask>
+                                        <DrawingBrush
+											ViewportUnits="Absolute"
+											ViewboxUnits="Absolute"
+											Viewport="237.00830078125,259.606994628906,7.90010070800781,36.9963989257813"
+											Viewbox="237.00830078125,259.606994628906,7.90010070800781,36.9963989257813"
+											Stretch="Uniform"
+											TileMode="None">
+                                            <DrawingBrush.Drawing>
+                                                <DrawingGroup>
+                                                    <GeometryDrawing
+														Brush="#FFFFFFFF"
+														Geometry="M0,297 L0,297 L354,297 L354,0 L0,0" />
+                                                </DrawingGroup>
+                                            </DrawingBrush.Drawing>
+                                        </DrawingBrush>
+                                    </DrawingGroup.OpacityMask>
+                                    <DrawingGroup>
+                                        <DrawingGroup.OpacityMask>
+                                            <DrawingBrush
+												ViewportUnits="Absolute"
+												ViewboxUnits="Absolute"
+												Viewport="237.00830078125,259.606994628906,7.90010070800781,36.9963989257813"
+												Viewbox="237.00830078125,259.606994628906,7.90010070800781,36.9963989257813"
+												Stretch="Uniform"
+												TileMode="None">
+                                                <DrawingBrush.Drawing>
+                                                    <DrawingGroup>
+                                                        <GeometryDrawing
+															Brush="#FFFFFFFF"
+															Geometry="M0,297 L0,297 L354,297 L354,0 L0,0" />
+                                                    </DrawingGroup>
+                                                </DrawingBrush.Drawing>
+                                            </DrawingBrush>
+                                        </DrawingGroup.OpacityMask>
+                                        <GeometryDrawing
+											Brush="#FF4772FA"
+											Geometry="M390,390 M0,0 M237.0083,296.6034 L237.0083,296.6034 L244.9084,296.6034 L244.9084,259.607 L237.0083,259.607" />
+                                    </DrawingGroup>
+                                </DrawingGroup>
+                                <DrawingGroup>
+                                    <DrawingGroup.OpacityMask>
+                                        <DrawingBrush
+											ViewportUnits="Absolute"
+											ViewboxUnits="Absolute"
+											Viewport="235.873825073242,241.096923828125,10.7975463867188,10.7827453613281"
+											Viewbox="235.873825073242,241.096923828125,10.7975463867188,10.7827453613281"
+											Stretch="Uniform"
+											TileMode="None">
+                                            <DrawingBrush.Drawing>
+                                                <DrawingGroup>
+                                                    <GeometryDrawing
+														Brush="#FFFFFFFF"
+														Geometry="M0,297 L0,297 L354,297 L354,0 L0,0" />
+                                                </DrawingGroup>
+                                            </DrawingBrush.Drawing>
+                                        </DrawingBrush>
+                                    </DrawingGroup.OpacityMask>
+                                    <DrawingGroup>
+                                        <DrawingGroup.OpacityMask>
+                                            <DrawingBrush
+												ViewportUnits="Absolute"
+												ViewboxUnits="Absolute"
+												Viewport="235.873825073242,241.096923828125,10.7975463867188,10.7827453613281"
+												Viewbox="235.873825073242,241.096923828125,10.7975463867188,10.7827453613281"
+												Stretch="Uniform"
+												TileMode="None">
+                                                <DrawingBrush.Drawing>
+                                                    <DrawingGroup>
+                                                        <GeometryDrawing
+															Brush="#FFFFFFFF"
+															Geometry="M0,297 L0,297 L354,297 L354,0 L0,0" />
+                                                    </DrawingGroup>
+                                                </DrawingBrush.Drawing>
+                                            </DrawingBrush>
+                                        </DrawingGroup.OpacityMask>
+                                        <GeometryDrawing
+											Brush="#FF4772FA"
+											Geometry="M390,390 M0,0 M241.270149,241.096924 C238.289463,241.096924 235.873827,243.510187 235.873827,246.488644 C235.873827,249.466402 238.289463,251.879665 241.270149,251.879665 C244.250835,251.879665 246.671373,249.466402 246.671373,246.488644 C246.671373,243.510187 244.250835,241.096924 241.270149,241.096924" />
+                                    </DrawingGroup>
+                                </DrawingGroup>
+                                <DrawingGroup>
+                                    <DrawingGroup.OpacityMask>
+                                        <DrawingBrush
+											ViewportUnits="Absolute"
+											ViewboxUnits="Absolute"
+											Viewport="322.194671630859,244.334121704102,31.80517578125,52.6658172607422"
+											Viewbox="322.194671630859,244.334121704102,31.80517578125,52.6658172607422"
+											Stretch="Uniform"
+											TileMode="None">
+                                            <DrawingBrush.Drawing>
+                                                <DrawingGroup>
+                                                    <GeometryDrawing
+														Brush="#FFFFFFFF"
+														Geometry="M0,297 L0,297 L354,297 L354,0 L0,0" />
+                                                </DrawingGroup>
+                                            </DrawingBrush.Drawing>
+                                        </DrawingBrush>
+                                    </DrawingGroup.OpacityMask>
+                                    <DrawingGroup>
+                                        <DrawingGroup.OpacityMask>
+                                            <DrawingBrush
+												ViewportUnits="Absolute"
+												ViewboxUnits="Absolute"
+												Viewport="322.194671630859,244.334121704102,31.80517578125,52.6658172607422"
+												Viewbox="322.194671630859,244.334121704102,31.80517578125,52.6658172607422"
+												Stretch="Uniform"
+												TileMode="None">
+                                                <DrawingBrush.Drawing>
+                                                    <DrawingGroup>
+                                                        <GeometryDrawing
+															Brush="#FFFFFFFF"
+															Geometry="M0,297 L0,297 L354,297 L354,0 L0,0" />
+                                                    </DrawingGroup>
+                                                </DrawingBrush.Drawing>
+                                            </DrawingBrush>
+                                        </DrawingGroup.OpacityMask>
+                                        <GeometryDrawing
+											Brush="#FF4772FA"
+											Geometry="M390,390 M0,0 M331.389501,269.034752 L350.733499,249.714653 L345.34768,244.334125 L323.310071,266.344488 C322.595883,267.057974 322.194677,268.025378 322.194677,269.034752 C322.194677,270.044126 322.595883,271.011529 323.310071,271.725016 L348.61404,296.99993 L353.99986,291.619401 L331.389501,269.034752" />
+                                    </DrawingGroup>
+                                </DrawingGroup>
+                                <DrawingGroup>
+                                    <DrawingGroup.OpacityMask>
+                                        <DrawingBrush
+											ViewportUnits="Absolute"
+											ViewboxUnits="Absolute"
+											Viewport="73.9807281494141,241.385192871094,55.5274353027344,55.3931274414063"
+											Viewbox="73.9807281494141,241.385192871094,55.5274353027344,55.3931274414063"
+											Stretch="Uniform"
+											TileMode="None">
+                                            <DrawingBrush.Drawing>
+                                                <DrawingGroup>
+                                                    <GeometryDrawing
+														Brush="#FFFFFFFF"
+														Geometry="M0,297 L0,297 L354,297 L354,0 L0,0" />
+                                                </DrawingGroup>
+                                            </DrawingBrush.Drawing>
+                                        </DrawingBrush>
+                                    </DrawingGroup.OpacityMask>
+                                    <DrawingGroup>
+                                        <DrawingGroup.OpacityMask>
+                                            <DrawingBrush
+												ViewportUnits="Absolute"
+												ViewboxUnits="Absolute"
+												Viewport="73.9807281494141,241.385192871094,55.5274353027344,55.3931274414063"
+												Viewbox="73.9807281494141,241.385192871094,55.5274353027344,55.3931274414063"
+												Stretch="Uniform"
+												TileMode="None">
+                                                <DrawingBrush.Drawing>
+                                                    <DrawingGroup>
+                                                        <GeometryDrawing
+															Brush="#FFFFFFFF"
+															Geometry="M0,297 L0,297 L354,297 L354,0 L0,0" />
+                                                    </DrawingGroup>
+                                                </DrawingBrush.Drawing>
+                                            </DrawingBrush>
+                                        </DrawingGroup.OpacityMask>
+                                        <GeometryDrawing
+											Brush="#FF4772FA"
+											Geometry="M390,390 M0,0 M101.740945,289.167805 C90.6395189,289.167805 81.5980359,280.210051 81.5980359,269.115334 C81.5980359,258.022016 90.3594451,248.99571 101.715738,248.99571 L101.715738,241.385186 C86.4097041,241.385186 73.9807283,253.79146 73.9807283,269.081058 C73.9807283,284.372756 86.4468139,296.778329 101.749347,296.778329 C117.054681,296.778329 129.508163,283.777484 129.508163,268.979631 L121.890155,268.979631 C121.890155,280.324768 112.845171,289.167805 101.740945,289.167805" />
+                                    </DrawingGroup>
+                                </DrawingGroup>
+                                <DrawingGroup>
+                                    <DrawingGroup.OpacityMask>
+                                        <DrawingBrush
+											ViewportUnits="Absolute"
+											ViewboxUnits="Absolute"
+											Viewport="0.00039999998989515,227.05029296875,67.6454969116312,69.5531005859375"
+											Viewbox="0.00039999998989515,227.05029296875,67.6454969116312,69.5531005859375"
+											Stretch="Uniform"
+											TileMode="None">
+                                            <DrawingBrush.Drawing>
+                                                <DrawingGroup>
+                                                    <GeometryDrawing
+														Brush="#FFFFFFFF"
+														Geometry="M0,297 L0,297 L354,297 L354,0 L0,0" />
+                                                </DrawingGroup>
+                                            </DrawingBrush.Drawing>
+                                        </DrawingBrush>
+                                    </DrawingGroup.OpacityMask>
+                                    <DrawingGroup>
+                                        <DrawingGroup.OpacityMask>
+                                            <DrawingBrush
+												ViewportUnits="Absolute"
+												ViewboxUnits="Absolute"
+												Viewport="0.00039999998989515,227.05029296875,67.6454969116312,69.5531005859375"
+												Viewbox="0.00039999998989515,227.05029296875,67.6454969116312,69.5531005859375"
+												Stretch="Uniform"
+												TileMode="None">
+                                                <DrawingBrush.Drawing>
+                                                    <DrawingGroup>
+                                                        <GeometryDrawing
+															Brush="#FFFFFFFF"
+															Geometry="M0,297 L0,297 L354,297 L354,0 L0,0" />
+                                                    </DrawingGroup>
+                                                </DrawingBrush.Drawing>
+                                            </DrawingBrush>
+                                        </DrawingGroup.OpacityMask>
+                                        <GeometryDrawing
+											Brush="#FF4772FA"
+											Geometry="M390,390 M0,0 M67.6459,233.9565 L67.6459,233.9565 L67.6459,227.0503 L0.0004,227.0503 L0.0004,233.9565 L30.1196,233.9565 L30.1196,296.6034 L38.0197,296.6034 L38.0197,233.9565" />
+                                    </DrawingGroup>
+                                </DrawingGroup>
+                                <DrawingGroup>
+                                    <DrawingGroup.OpacityMask>
+                                        <DrawingBrush
+											ViewportUnits="Absolute"
+											ViewboxUnits="Absolute"
+											Viewport="134.798095703125,240.862594604492,7.90020751953125,55.7407989501953"
+											Viewbox="134.798095703125,240.862594604492,7.90020751953125,55.7407989501953"
+											Stretch="Uniform"
+											TileMode="None">
+                                            <DrawingBrush.Drawing>
+                                                <DrawingGroup>
+                                                    <GeometryDrawing
+														Brush="#FFFFFFFF"
+														Geometry="M0,297 L0,297 L354,297 L354,0 L0,0" />
+                                                </DrawingGroup>
+                                            </DrawingBrush.Drawing>
+                                        </DrawingBrush>
+                                    </DrawingGroup.OpacityMask>
+                                    <DrawingGroup>
+                                        <DrawingGroup.OpacityMask>
+                                            <DrawingBrush
+												ViewportUnits="Absolute"
+												ViewboxUnits="Absolute"
+												Viewport="134.798095703125,240.862594604492,7.90020751953125,55.7407989501953"
+												Viewbox="134.798095703125,240.862594604492,7.90020751953125,55.7407989501953"
+												Stretch="Uniform"
+												TileMode="None">
+                                                <DrawingBrush.Drawing>
+                                                    <DrawingGroup>
+                                                        <GeometryDrawing
+															Brush="#FFFFFFFF"
+															Geometry="M0,297 L0,297 L354,297 L354,0 L0,0" />
+                                                    </DrawingGroup>
+                                                </DrawingBrush.Drawing>
+                                            </DrawingBrush>
+                                        </DrawingGroup.OpacityMask>
+                                        <GeometryDrawing
+											Brush="#FF4772FA"
+											Geometry="M390,390 M0,0 M134.7981,296.6034 L134.7981,296.6034 L142.6983,296.6034 L142.6983,240.8626 L134.7981,240.8626" />
+                                    </DrawingGroup>
+                                </DrawingGroup>
+                                <DrawingGroup>
+                                    <DrawingGroup.OpacityMask>
+                                        <DrawingBrush
+											ViewportUnits="Absolute"
+											ViewboxUnits="Absolute"
+											Viewport="60.2397003173828,259.606994628906,7.40650177001953,36.9963989257813"
+											Viewbox="60.2397003173828,259.606994628906,7.40650177001953,36.9963989257813"
+											Stretch="Uniform"
+											TileMode="None">
+                                            <DrawingBrush.Drawing>
+                                                <DrawingGroup>
+                                                    <GeometryDrawing
+														Brush="#FFFFFFFF"
+														Geometry="M0,297 L0,297 L354,297 L354,0 L0,0" />
+                                                </DrawingGroup>
+                                            </DrawingBrush.Drawing>
+                                        </DrawingBrush>
+                                    </DrawingGroup.OpacityMask>
+                                    <DrawingGroup>
+                                        <DrawingGroup.OpacityMask>
+                                            <DrawingBrush
+												ViewportUnits="Absolute"
+												ViewboxUnits="Absolute"
+												Viewport="60.2397003173828,259.606994628906,7.40650177001953,36.9963989257813"
+												Viewbox="60.2397003173828,259.606994628906,7.40650177001953,36.9963989257813"
+												Stretch="Uniform"
+												TileMode="None">
+                                                <DrawingBrush.Drawing>
+                                                    <DrawingGroup>
+                                                        <GeometryDrawing
+															Brush="#FFFFFFFF"
+															Geometry="M0,297 L0,297 L354,297 L354,0 L0,0" />
+                                                    </DrawingGroup>
+                                                </DrawingBrush.Drawing>
+                                            </DrawingBrush>
+                                        </DrawingGroup.OpacityMask>
+                                        <GeometryDrawing
+											Brush="#FF4772FA"
+											Geometry="M390,390 M0,0 M60.2397,296.6034 L60.2397,296.6034 L67.6462,296.6034 L67.6462,259.607 L60.2397,259.607" />
+                                    </DrawingGroup>
+                                </DrawingGroup>
+                                <DrawingGroup>
+                                    <DrawingGroup.OpacityMask>
+                                        <DrawingBrush
+											ViewportUnits="Absolute"
+											ViewboxUnits="Absolute"
+											Viewport="58.5889930725098,241.096923828125,10.7926445007324,10.7827453613281"
+											Viewbox="58.5889930725098,241.096923828125,10.7926445007324,10.7827453613281"
+											Stretch="Uniform"
+											TileMode="None">
+                                            <DrawingBrush.Drawing>
+                                                <DrawingGroup>
+                                                    <GeometryDrawing
+														Brush="#FFFFFFFF"
+														Geometry="M0,297 L0,297 L354,297 L354,0 L0,0" />
+                                                </DrawingGroup>
+                                            </DrawingBrush.Drawing>
+                                        </DrawingBrush>
+                                    </DrawingGroup.OpacityMask>
+                                    <DrawingGroup>
+                                        <DrawingGroup.OpacityMask>
+                                            <DrawingBrush
+												ViewportUnits="Absolute"
+												ViewboxUnits="Absolute"
+												Viewport="58.5889930725098,241.096923828125,10.7926445007324,10.7827453613281"
+												Viewbox="58.5889930725098,241.096923828125,10.7926445007324,10.7827453613281"
+												Stretch="Uniform"
+												TileMode="None">
+                                                <DrawingBrush.Drawing>
+                                                    <DrawingGroup>
+                                                        <GeometryDrawing
+															Brush="#FFFFFFFF"
+															Geometry="M0,297 L0,297 L354,297 L354,0 L0,0" />
+                                                    </DrawingGroup>
+                                                </DrawingBrush.Drawing>
+                                            </DrawingBrush>
+                                        </DrawingGroup.OpacityMask>
+                                        <GeometryDrawing
+											Brush="#FF4772FA"
+											Geometry="M390,390 M0,0 M63.9853139,241.096924 C61.0046283,241.096924 58.5889917,243.510187 58.5889917,246.488644 C58.5889917,249.466402 61.0046283,251.879665 63.9853139,251.879665 C66.9631988,251.879665 69.3816362,249.466402 69.3816362,246.488644 C69.3816362,243.510187 66.9631988,241.096924 63.9853139,241.096924" />
+                                    </DrawingGroup>
+                                </DrawingGroup>
+                                <DrawingGroup>
+                                    <DrawingGroup.OpacityMask>
+                                        <DrawingBrush
+											ViewportUnits="Absolute"
+											ViewboxUnits="Absolute"
+											Viewport="144.897171020508,244.334060668945,31.80517578125,52.6657867431641"
+											Viewbox="144.897171020508,244.334060668945,31.80517578125,52.6657867431641"
+											Stretch="Uniform"
+											TileMode="None">
+                                            <DrawingBrush.Drawing>
+                                                <DrawingGroup>
+                                                    <GeometryDrawing
+														Brush="#FFFFFFFF"
+														Geometry="M0,297 L0,297 L354,297 L354,0 L0,0" />
+                                                </DrawingGroup>
+                                            </DrawingBrush.Drawing>
+                                        </DrawingBrush>
+                                    </DrawingGroup.OpacityMask>
+                                    <DrawingGroup>
+                                        <DrawingGroup.OpacityMask>
+                                            <DrawingBrush
+												ViewportUnits="Absolute"
+												ViewboxUnits="Absolute"
+												Viewport="144.897171020508,244.334060668945,31.80517578125,52.6657867431641"
+												Viewbox="144.897171020508,244.334060668945,31.80517578125,52.6657867431641"
+												Stretch="Uniform"
+												TileMode="None">
+                                                <DrawingBrush.Drawing>
+                                                    <DrawingGroup>
+                                                        <GeometryDrawing
+															Brush="#FFFFFFFF"
+															Geometry="M0,297 L0,297 L354,297 L354,0 L0,0" />
+                                                    </DrawingGroup>
+                                                </DrawingBrush.Drawing>
+                                            </DrawingBrush>
+                                        </DrawingGroup.OpacityMask>
+                                        <GeometryDrawing
+											Brush="#FF4772FA"
+											Geometry="M390,390 M0,0 M173.435991,249.714583 L168.050171,244.334055 L146.013263,266.344418 C145.298375,267.057904 144.897169,268.025308 144.897169,269.034682 C144.897169,270.044056 145.298375,271.011459 146.013263,271.724946 L171.316532,296.99986 L176.702352,291.619332 L154.091992,269.034682 L173.435991,249.714583" />
+                                    </DrawingGroup>
+                                </DrawingGroup>
+                            </DrawingGroup>
+                        </DrawingGroup>
+                    </DrawingGroup>
+                </DrawingImage.Drawing>
+            </DrawingImage>
+            <DrawingImage
+				x:Key="DidaLogoDrawingImage">
+                <DrawingImage.Drawing>
+                    <DrawingGroup
+						ClipGeometry="M0,0 L0,390 L390,390 L390,0 L0,0">
+                        <DrawingGroup.Transform>
+                            <TranslateTransform
+								X="0.00021013514196965843"
+								Y="6.99919110047631E-05" />
+                        </DrawingGroup.Transform>
+                        <DrawingGroup
+							Opacity="1">
+                            <DrawingGroup
+								Opacity="1"
+								Transform="1,0,0,1,39.5,47">
+                                <GeometryDrawing
+									Brush="#FF4772FA"
+									Geometry="M390,390 M0,0 M207.0344,247.6546 L207.0344,247.6546 L226.1217,247.6546 L226.1217,242.3793 L207.0344,242.3793 L207.0344,237.5092 L226.1217,237.5092 L226.1217,232.2339 L207.0344,232.2339 L207.0344,226.5527 L201.3488,226.5527 L201.3488,232.2339 L181.8553,232.2339 L181.8553,237.5092 L201.3488,237.5092 L201.3488,242.3793 L181.8553,242.3793 L181.8553,247.6546 L201.3488,247.6546 L201.3488,252.1186 L177.7941,252.1186 L177.7941,257.3939 L230.1829,257.3939 L230.1829,252.1186 L207.0344,252.1186" />
+                                <GeometryDrawing
+									Brush="#FF4772FA"
+									Geometry="M390,390 M0,0 M168.0479,295.5402 L168.0479,295.5402 L173.7327,295.5402 L173.7327,267.9451 L168.0479,267.9451" />
+                                <DrawingGroup
+									Opacity="1">
+                                    <DrawingGroup>
+                                        <DrawingGroup.OpacityMask>
+                                            <DrawingBrush
+												ViewportUnits="Absolute"
+												ViewboxUnits="Absolute"
+												Viewport="183.073928833008,261.046051025391,41.8294982910156,34.4941101074219"
+												Viewbox="183.073928833008,261.046051025391,41.8294982910156,34.4941101074219"
+												Stretch="Uniform"
+												TileMode="None">
+                                                <DrawingBrush.Drawing>
+                                                    <DrawingGroup>
+                                                        <GeometryDrawing
+															Brush="#FFFFFFFF"
+															Geometry="M0,0 L0,0 L311,0 L311,296 L0,296" />
+                                                    </DrawingGroup>
+                                                </DrawingBrush.Drawing>
+                                            </DrawingBrush>
+                                        </DrawingGroup.OpacityMask>
+                                        <DrawingGroup>
+                                            <DrawingGroup.OpacityMask>
+                                                <DrawingBrush
+													ViewportUnits="Absolute"
+													ViewboxUnits="Absolute"
+													Viewport="183.073928833008,261.046051025391,41.8294982910156,34.4941101074219"
+													Viewbox="183.073928833008,261.046051025391,41.8294982910156,34.4941101074219"
+													Stretch="Uniform"
+													TileMode="None">
+                                                    <DrawingBrush.Drawing>
+                                                        <DrawingGroup>
+                                                            <GeometryDrawing
+																Brush="#FFFFFFFF"
+																Geometry="M0,0 L0,0 L311,0 L311,296 L0,296" />
+                                                        </DrawingGroup>
+                                                    </DrawingBrush.Drawing>
+                                                </DrawingBrush>
+                                            </DrawingGroup.OpacityMask>
+                                            <GeometryDrawing
+												Brush="#FF4772FA"
+												Geometry="M390,390 M0,0 M188.759489,282.1486 L219.217876,282.1486 L219.217876,277.278563 L188.759489,277.278563 L188.759489,282.1486 M188.759489,272.003273 L219.217876,272.003273 L219.217876,266.727982 L188.759489,266.727982 L188.759489,272.003273 M222.214403,261.046039 L186.070459,261.046039 C184.50005,261.046039 183.073932,262.317792 183.073932,263.88701 L183.073932,295.540153 L188.759489,295.540153 L188.759489,287.423891 L219.217876,287.423891 L219.217876,295.540153 L224.903432,295.540153 L224.903432,263.88701 C224.903432,262.317792 223.784813,261.046039 222.214403,261.046039 L222.214403,261.046039" />
+                                        </DrawingGroup>
+                                    </DrawingGroup>
+                                    <DrawingGroup>
+                                        <DrawingGroup.OpacityMask>
+                                            <DrawingBrush
+												ViewportUnits="Absolute"
+												ViewboxUnits="Absolute"
+												Viewport="167.479248046875,231.229339599609,6.9078369140625,6.90190124511719"
+												Viewbox="167.479248046875,231.229339599609,6.9078369140625,6.90190124511719"
+												Stretch="Uniform"
+												TileMode="None">
+                                                <DrawingBrush.Drawing>
+                                                    <DrawingGroup>
+                                                        <GeometryDrawing
+															Brush="#FFFFFFFF"
+															Geometry="M0,0 L0,0 L311,0 L311,296 L0,296" />
+                                                    </DrawingGroup>
+                                                </DrawingBrush.Drawing>
+                                            </DrawingBrush>
+                                        </DrawingGroup.OpacityMask>
+                                        <DrawingGroup>
+                                            <DrawingGroup.OpacityMask>
+                                                <DrawingBrush
+													ViewportUnits="Absolute"
+													ViewboxUnits="Absolute"
+													Viewport="167.479248046875,231.229339599609,6.9078369140625,6.90190124511719"
+													Viewbox="167.479248046875,231.229339599609,6.9078369140625,6.90190124511719"
+													Stretch="Uniform"
+													TileMode="None">
+                                                    <DrawingBrush.Drawing>
+                                                        <DrawingGroup>
+                                                            <GeometryDrawing
+																Brush="#FFFFFFFF"
+																Geometry="M0,0 L0,0 L311,0 L311,296 L0,296" />
+                                                        </DrawingGroup>
+                                                    </DrawingBrush.Drawing>
+                                                </DrawingBrush>
+                                            </DrawingGroup.OpacityMask>
+                                            <GeometryDrawing
+												Brush="#FF4772FA"
+												Geometry="M390,390 M0,0 M170.933165,231.229344 C169.025838,231.229344 167.479244,232.774765 167.479244,234.680645 C167.479244,236.585825 169.025838,238.131246 170.933165,238.131246 C172.840491,238.131246 174.387086,236.585825 174.387086,234.680645 C174.387086,232.774765 172.840491,231.229344 170.933165,231.229344" />
+                                        </DrawingGroup>
+                                    </DrawingGroup>
+                                    <DrawingGroup>
+                                        <DrawingGroup.OpacityMask>
+                                            <DrawingBrush
+												ViewportUnits="Absolute"
+												ViewboxUnits="Absolute"
+												Viewport="167.479248046875,251.305191040039,6.9078369140625,6.90190124511719"
+												Viewbox="167.479248046875,251.305191040039,6.9078369140625,6.90190124511719"
+												Stretch="Uniform"
+												TileMode="None">
+                                                <DrawingBrush.Drawing>
+                                                    <DrawingGroup>
+                                                        <GeometryDrawing
+															Brush="#FFFFFFFF"
+															Geometry="M0,0 L0,0 L311,0 L311,296 L0,296" />
+                                                    </DrawingGroup>
+                                                </DrawingBrush.Drawing>
+                                            </DrawingBrush>
+                                        </DrawingGroup.OpacityMask>
+                                        <DrawingGroup>
+                                            <DrawingGroup.OpacityMask>
+                                                <DrawingBrush
+													ViewportUnits="Absolute"
+													ViewboxUnits="Absolute"
+													Viewport="167.479248046875,251.305191040039,6.9078369140625,6.90190124511719"
+													Viewbox="167.479248046875,251.305191040039,6.9078369140625,6.90190124511719"
+													Stretch="Uniform"
+													TileMode="None">
+                                                    <DrawingBrush.Drawing>
+                                                        <DrawingGroup>
+                                                            <GeometryDrawing
+																Brush="#FFFFFFFF"
+																Geometry="M0,0 L0,0 L311,0 L311,296 L0,296" />
+                                                        </DrawingGroup>
+                                                    </DrawingBrush.Drawing>
+                                                </DrawingBrush>
+                                            </DrawingGroup.OpacityMask>
+                                            <GeometryDrawing
+												Brush="#FF4772FA"
+												Geometry="M390,390 M0,0 M170.933165,251.305194 C169.025838,251.305194 167.479244,252.850616 167.479244,254.756495 C167.479244,256.662375 169.025838,258.207097 170.933165,258.207097 C172.840491,258.207097 174.387086,256.662375 174.387086,254.756495 C174.387086,252.850616 172.840491,251.305194 170.933165,251.305194" />
+                                        </DrawingGroup>
+                                    </DrawingGroup>
+                                    <DrawingGroup>
+                                        <DrawingGroup.OpacityMask>
+                                            <DrawingBrush
+												ViewportUnits="Absolute"
+												ViewboxUnits="Absolute"
+												Viewport="24.3945178985596,255.365081787109,29.170259475708,40.2642517089844"
+												Viewbox="24.3945178985596,255.365081787109,29.170259475708,40.2642517089844"
+												Stretch="Uniform"
+												TileMode="None">
+                                                <DrawingBrush.Drawing>
+                                                    <DrawingGroup>
+                                                        <GeometryDrawing
+															Brush="#FFFFFFFF"
+															Geometry="M0,0 L0,0 L311,0 L311,296 L0,296" />
+                                                    </DrawingGroup>
+                                                </DrawingBrush.Drawing>
+                                            </DrawingBrush>
+                                        </DrawingGroup.OpacityMask>
+                                        <DrawingGroup>
+                                            <DrawingGroup.OpacityMask>
+                                                <DrawingBrush
+													ViewportUnits="Absolute"
+													ViewboxUnits="Absolute"
+													Viewport="24.3945178985596,255.365081787109,29.170259475708,40.2642517089844"
+													Viewbox="24.3945178985596,255.365081787109,29.170259475708,40.2642517089844"
+													Stretch="Uniform"
+													TileMode="None">
+                                                    <DrawingBrush.Drawing>
+                                                        <DrawingGroup>
+                                                            <GeometryDrawing
+																Brush="#FFFFFFFF"
+																Geometry="M0,0 L0,0 L311,0 L311,296 L0,296" />
+                                                        </DrawingGroup>
+                                                    </DrawingBrush.Drawing>
+                                                </DrawingBrush>
+                                            </DrawingGroup.OpacityMask>
+                                            <GeometryDrawing
+												Brush="#FF4772FA"
+												Geometry="M390,390 M0,0 M38.9792971,289.948079 C34.0726417,289.948079 30.0800741,285.95854 30.0800741,281.054907 C30.0800741,276.151973 34.0726417,272.162434 38.9792971,272.162434 C41.5506507,272.162434 43.9952227,273.273906 45.687511,275.211982 C47.10102,276.828795 47.8792205,278.904755 47.8792205,281.054907 C47.8792205,285.95854 43.8866529,289.948079 38.9792971,289.948079 M42.1516372,266.83185 L42.1516372,263.88729 L51.8984052,263.88729 L51.8984052,258.6113 L42.1516372,258.6113 L42.1516372,255.365075 L36.4660809,255.365075 L36.4660809,258.6113 L25.5012295,258.6113 L25.5012295,263.88729 L36.4660809,263.88729 L36.4660809,266.702365 C29.6177768,267.896427 24.3945178,273.875836 24.3945178,281.054907 C24.3945178,289.091378 30.9374255,295.629323 38.9792971,295.629323 C47.0211687,295.629323 53.5647768,289.091378 53.5647768,281.054907 C53.5647768,277.530114 52.2878556,274.128507 49.971466,271.475814 C47.907939,269.112887 45.1593714,267.502373 42.1516372,266.83185" />
+                                        </DrawingGroup>
+                                    </DrawingGroup>
+                                    <DrawingGroup>
+                                        <DrawingGroup.OpacityMask>
+                                            <DrawingBrush
+												ViewportUnits="Absolute"
+												ViewboxUnits="Absolute"
+												Viewport="0.727800011634827,267.945098876953,5.68550002574921,27.5950927734375"
+												Viewbox="0.727800011634827,267.945098876953,5.68550002574921,27.5950927734375"
+												Stretch="Uniform"
+												TileMode="None">
+                                                <DrawingBrush.Drawing>
+                                                    <DrawingGroup>
+                                                        <GeometryDrawing
+															Brush="#FFFFFFFF"
+															Geometry="M0,0 L0,0 L311,0 L311,296 L0,296" />
+                                                    </DrawingGroup>
+                                                </DrawingBrush.Drawing>
+                                            </DrawingBrush>
+                                        </DrawingGroup.OpacityMask>
+                                        <DrawingGroup>
+                                            <DrawingGroup.OpacityMask>
+                                                <DrawingBrush
+													ViewportUnits="Absolute"
+													ViewboxUnits="Absolute"
+													Viewport="0.727800011634827,267.945098876953,5.68550002574921,27.5950927734375"
+													Viewbox="0.727800011634827,267.945098876953,5.68550002574921,27.5950927734375"
+													Stretch="Uniform"
+													TileMode="None">
+                                                    <DrawingBrush.Drawing>
+                                                        <DrawingGroup>
+                                                            <GeometryDrawing
+																Brush="#FFFFFFFF"
+																Geometry="M0,0 L0,0 L311,0 L311,296 L0,296" />
+                                                        </DrawingGroup>
+                                                    </DrawingBrush.Drawing>
+                                                </DrawingBrush>
+                                            </DrawingGroup.OpacityMask>
+                                            <GeometryDrawing
+												Brush="#FF4772FA"
+												Geometry="M390,390 M0,0 M0.7278,295.5402 L0.7278,295.5402 L6.4133,295.5402 L6.4133,267.9451 L0.7278,267.9451" />
+                                        </DrawingGroup>
+                                    </DrawingGroup>
+                                    <DrawingGroup>
+                                        <DrawingGroup.OpacityMask>
+                                            <DrawingBrush
+												ViewportUnits="Absolute"
+												ViewboxUnits="Absolute"
+												Viewport="14.5353975296021,226.539672851563,49.9526243209839,69.0001220703125"
+												Viewbox="14.5353975296021,226.539672851563,49.9526243209839,69.0001220703125"
+												Stretch="Uniform"
+												TileMode="None">
+                                                <DrawingBrush.Drawing>
+                                                    <DrawingGroup>
+                                                        <GeometryDrawing
+															Brush="#FFFFFFFF"
+															Geometry="M0,0 L0,0 L311,0 L311,296 L0,296" />
+                                                    </DrawingGroup>
+                                                </DrawingBrush.Drawing>
+                                            </DrawingBrush>
+                                        </DrawingGroup.OpacityMask>
+                                        <DrawingGroup>
+                                            <DrawingGroup.OpacityMask>
+                                                <DrawingBrush
+													ViewportUnits="Absolute"
+													ViewboxUnits="Absolute"
+													Viewport="14.5353975296021,226.539672851563,49.9526243209839,69.0001220703125"
+													Viewbox="14.5353975296021,226.539672851563,49.9526243209839,69.0001220703125"
+													Stretch="Uniform"
+													TileMode="None">
+                                                    <DrawingBrush.Drawing>
+                                                        <DrawingGroup>
+                                                            <GeometryDrawing
+																Brush="#FFFFFFFF"
+																Geometry="M0,0 L0,0 L311,0 L311,296 L0,296" />
+                                                        </DrawingGroup>
+                                                    </DrawingBrush.Drawing>
+                                                </DrawingBrush>
+                                            </DrawingGroup.OpacityMask>
+                                            <GeometryDrawing
+												Brush="#FF4772FA"
+												Geometry="M390,390 M0,0 M29.1558998,237.509508 L49.1292444,237.509508 L47.1301588,247.248883 L31.1549854,247.248883 L29.1558998,237.509508 M61.644893,247.248883 L52.9340912,247.248883 L54.9331768,237.509508 L61.644893,237.509508 L61.644893,231.828264 L41.1097872,231.828264 L40.0247894,226.539675 L34.2201565,226.539675 L35.3058547,231.828264 L17.3785259,231.828264 L17.3785259,237.509508 L23.3519673,237.509508 L25.3510529,247.248883 L17.3785259,247.248883 C15.8088164,247.248883 14.5353975,248.520636 14.5353975,250.089854 L14.5353975,295.539803 L20.2216543,295.539803 L20.2216543,252.930126 L58.8024651,252.930126 L58.8024651,295.539803 L64.4880214,295.539803 L64.4880214,250.089854 C64.4880214,248.520636 63.2153029,247.248883 61.644893,247.248883 L61.644893,247.248883" />
+                                        </DrawingGroup>
+                                    </DrawingGroup>
+                                    <DrawingGroup>
+                                        <DrawingGroup.OpacityMask>
+                                            <DrawingBrush
+												ViewportUnits="Absolute"
+												ViewboxUnits="Absolute"
+												Viewport="-0.000210135141969658,231.229339599609,6.9078424860636,6.90190124511719"
+												Viewbox="-0.000210135141969658,231.229339599609,6.9078424860636,6.90190124511719"
+												Stretch="Uniform"
+												TileMode="None">
+                                                <DrawingBrush.Drawing>
+                                                    <DrawingGroup>
+                                                        <GeometryDrawing
+															Brush="#FFFFFFFF"
+															Geometry="M0,0 L0,0 L311,0 L311,296 L0,296" />
+                                                    </DrawingGroup>
+                                                </DrawingBrush.Drawing>
+                                            </DrawingBrush>
+                                        </DrawingGroup.OpacityMask>
+                                        <DrawingGroup>
+                                            <DrawingGroup.OpacityMask>
+                                                <DrawingBrush
+													ViewportUnits="Absolute"
+													ViewboxUnits="Absolute"
+													Viewport="-0.000210135141969658,231.229339599609,6.9078424860636,6.90190124511719"
+													Viewbox="-0.000210135141969658,231.229339599609,6.9078424860636,6.90190124511719"
+													Stretch="Uniform"
+													TileMode="None">
+                                                    <DrawingBrush.Drawing>
+                                                        <DrawingGroup>
+                                                            <GeometryDrawing
+																Brush="#FFFFFFFF"
+																Geometry="M0,0 L0,0 L311,0 L311,296 L0,296" />
+                                                        </DrawingGroup>
+                                                    </DrawingBrush.Drawing>
+                                                </DrawingBrush>
+                                            </DrawingGroup.OpacityMask>
+                                            <GeometryDrawing
+												Brush="#FF4772FA"
+												Geometry="M390,390 M0,0 M3.45371104,231.229344 C1.54638446,231.229344 -0.000210135135,232.774765 -0.000210135135,234.680645 C-0.000210135135,236.585825 1.54638446,238.131246 3.45371104,238.131246 C5.36103761,238.131246 6.90763221,236.585825 6.90763221,234.680645 C6.90763221,232.774765 5.36103761,231.229344 3.45371104,231.229344" />
+                                        </DrawingGroup>
+                                    </DrawingGroup>
+                                    <DrawingGroup>
+                                        <DrawingGroup.OpacityMask>
+                                            <DrawingBrush
+												ViewportUnits="Absolute"
+												ViewboxUnits="Absolute"
+												Viewport="-0.000210135141969658,251.305191040039,6.9078424860636,6.90190124511719"
+												Viewbox="-0.000210135141969658,251.305191040039,6.9078424860636,6.90190124511719"
+												Stretch="Uniform"
+												TileMode="None">
+                                                <DrawingBrush.Drawing>
+                                                    <DrawingGroup>
+                                                        <GeometryDrawing
+															Brush="#FFFFFFFF"
+															Geometry="M0,0 L0,0 L311,0 L311,296 L0,296" />
+                                                    </DrawingGroup>
+                                                </DrawingBrush.Drawing>
+                                            </DrawingBrush>
+                                        </DrawingGroup.OpacityMask>
+                                        <DrawingGroup>
+                                            <DrawingGroup.OpacityMask>
+                                                <DrawingBrush
+													ViewportUnits="Absolute"
+													ViewboxUnits="Absolute"
+													Viewport="-0.000210135141969658,251.305191040039,6.9078424860636,6.90190124511719"
+													Viewbox="-0.000210135141969658,251.305191040039,6.9078424860636,6.90190124511719"
+													Stretch="Uniform"
+													TileMode="None">
+                                                    <DrawingBrush.Drawing>
+                                                        <DrawingGroup>
+                                                            <GeometryDrawing
+																Brush="#FFFFFFFF"
+																Geometry="M0,0 L0,0 L311,0 L311,296 L0,296" />
+                                                        </DrawingGroup>
+                                                    </DrawingBrush.Drawing>
+                                                </DrawingBrush>
+                                            </DrawingGroup.OpacityMask>
+                                            <GeometryDrawing
+												Brush="#FF4772FA"
+												Geometry="M390,390 M0,0 M3.45371104,251.305194 C1.54638446,251.305194 -0.000210135135,252.850616 -0.000210135135,254.756495 C-0.000210135135,256.662375 1.54638446,258.207097 3.45371104,258.207097 C5.36103761,258.207097 6.90763221,256.662375 6.90763221,254.756495 C6.90763221,252.850616 5.36103761,251.305194 3.45371104,251.305194" />
+                                        </DrawingGroup>
+                                    </DrawingGroup>
+                                    <DrawingGroup>
+                                        <DrawingGroup.OpacityMask>
+                                            <DrawingBrush
+												ViewportUnits="Absolute"
+												ViewboxUnits="Absolute"
+												Viewport="81.7557373046875,244.002304077148,68.4557189941406,20.6675567626953"
+												Viewbox="81.7557373046875,244.002304077148,68.4557189941406,20.6675567626953"
+												Stretch="Uniform"
+												TileMode="None">
+                                                <DrawingBrush.Drawing>
+                                                    <DrawingGroup>
+                                                        <GeometryDrawing
+															Brush="#FFFFFFFF"
+															Geometry="M0,0 L0,0 L311,0 L311,296 L0,296" />
+                                                    </DrawingGroup>
+                                                </DrawingBrush.Drawing>
+                                            </DrawingBrush>
+                                        </DrawingGroup.OpacityMask>
+                                        <DrawingGroup>
+                                            <DrawingGroup.OpacityMask>
+                                                <DrawingBrush
+													ViewportUnits="Absolute"
+													ViewboxUnits="Absolute"
+													Viewport="81.7557373046875,244.002304077148,68.4557189941406,20.6675567626953"
+													Viewbox="81.7557373046875,244.002304077148,68.4557189941406,20.6675567626953"
+													Stretch="Uniform"
+													TileMode="None">
+                                                    <DrawingBrush.Drawing>
+                                                        <DrawingGroup>
+                                                            <GeometryDrawing
+																Brush="#FFFFFFFF"
+																Geometry="M0,0 L0,0 L311,0 L311,296 L0,296" />
+                                                        </DrawingGroup>
+                                                    </DrawingBrush.Drawing>
+                                                </DrawingBrush>
+                                            </DrawingGroup.OpacityMask>
+                                            <GeometryDrawing
+												Brush="#FF4772FA"
+												Geometry="M390,390 M0,0 M114.910157,244.259528 L81.755736,259.399479 L84.1190559,264.566282 L116.083412,249.970168 L147.820822,264.66987 L150.211459,259.515665 L117.287486,244.265827 C116.534502,243.916568 115.665243,243.914468 114.910157,244.259528" />
+                                        </DrawingGroup>
+                                    </DrawingGroup>
+                                    <DrawingGroup>
+                                        <DrawingGroup.OpacityMask>
+                                            <DrawingBrush
+												ViewportUnits="Absolute"
+												ViewboxUnits="Absolute"
+												Viewport="102.662902832031,258.610992431641,25.5854034423828,5.2760009765625"
+												Viewbox="102.662902832031,258.610992431641,25.5854034423828,5.2760009765625"
+												Stretch="Uniform"
+												TileMode="None">
+                                                <DrawingBrush.Drawing>
+                                                    <DrawingGroup>
+                                                        <GeometryDrawing
+															Brush="#FFFFFFFF"
+															Geometry="M0,0 L0,0 L311,0 L311,296 L0,296" />
+                                                    </DrawingGroup>
+                                                </DrawingBrush.Drawing>
+                                            </DrawingBrush>
+                                        </DrawingGroup.OpacityMask>
+                                        <DrawingGroup>
+                                            <DrawingGroup.OpacityMask>
+                                                <DrawingBrush
+													ViewportUnits="Absolute"
+													ViewboxUnits="Absolute"
+													Viewport="102.662902832031,258.610992431641,25.5854034423828,5.2760009765625"
+													Viewbox="102.662902832031,258.610992431641,25.5854034423828,5.2760009765625"
+													Stretch="Uniform"
+													TileMode="None">
+                                                    <DrawingBrush.Drawing>
+                                                        <DrawingGroup>
+                                                            <GeometryDrawing
+																Brush="#FFFFFFFF"
+																Geometry="M0,0 L0,0 L311,0 L311,296 L0,296" />
+                                                        </DrawingGroup>
+                                                    </DrawingBrush.Drawing>
+                                                </DrawingBrush>
+                                            </DrawingGroup.OpacityMask>
+                                            <GeometryDrawing
+												Brush="#FF4772FA"
+												Geometry="M390,390 M0,0 M102.6629,263.887 L102.6629,263.887 L128.2483,263.887 L128.2483,258.611 L102.6629,258.611" />
+                                        </DrawingGroup>
+                                    </DrawingGroup>
+                                    <DrawingGroup>
+                                        <DrawingGroup.OpacityMask>
+                                            <DrawingBrush
+												ViewportUnits="Absolute"
+												ViewboxUnits="Absolute"
+												Viewport="90.4795684814453,267.945220947266,50.3581848144531,28.0548400878906"
+												Viewbox="90.4795684814453,267.945220947266,50.3581848144531,28.0548400878906"
+												Stretch="Uniform"
+												TileMode="None">
+                                                <DrawingBrush.Drawing>
+                                                    <DrawingGroup>
+                                                        <GeometryDrawing
+															Brush="#FFFFFFFF"
+															Geometry="M0,0 L0,0 L311,0 L311,296 L0,296" />
+                                                    </DrawingGroup>
+                                                </DrawingBrush.Drawing>
+                                            </DrawingBrush>
+                                        </DrawingGroup.OpacityMask>
+                                        <DrawingGroup>
+                                            <DrawingGroup.OpacityMask>
+                                                <DrawingBrush
+													ViewportUnits="Absolute"
+													ViewboxUnits="Absolute"
+													Viewport="90.4795684814453,267.945220947266,50.3581848144531,28.0548400878906"
+													Viewbox="90.4795684814453,267.945220947266,50.3581848144531,28.0548400878906"
+													Stretch="Uniform"
+													TileMode="None">
+                                                    <DrawingBrush.Drawing>
+                                                        <DrawingGroup>
+                                                            <GeometryDrawing
+																Brush="#FFFFFFFF"
+																Geometry="M0,0 L0,0 L311,0 L311,296 L0,296" />
+                                                        </DrawingGroup>
+                                                    </DrawingBrush.Drawing>
+                                                </DrawingBrush>
+                                            </DrawingGroup.OpacityMask>
+                                            <GeometryDrawing
+												Brush="#FF4772FA"
+												Geometry="M390,390 M0,0 M135.218737,273.626455 C134.610046,277.709783 132.694314,281.506845 129.673972,284.531895 C125.948276,288.263864 121.031114,290.318826 115.828168,290.318826 C110.624521,290.318826 105.707359,288.263864 101.981663,284.531895 C98.9613207,281.506845 97.0455887,277.709783 96.4368973,273.626455 L135.218737,273.626455 M90.4795662,270.785483 C90.4795662,277.448014 93.1440797,283.754985 97.9253545,288.543831 C102.725541,293.352276 109.103843,296.00007 115.828168,296.00007 C122.552492,296.00007 128.760584,293.352276 133.560771,288.543831 C138.342046,283.754985 140.837751,277.448014 140.837751,270.785483 L140.837751,267.945211 L90.4795662,267.945211 L90.4795662,270.785483" />
+                                        </DrawingGroup>
+                                    </DrawingGroup>
+                                    <DrawingGroup>
+                                        <DrawingGroup.OpacityMask>
+                                            <DrawingBrush
+												ViewportUnits="Absolute"
+												ViewboxUnits="Absolute"
+												Viewport="87.0354995727539,226.539703369141,26.5925979614258,20.8737030029297"
+												Viewbox="87.0354995727539,226.539703369141,26.5925979614258,20.8737030029297"
+												Stretch="Uniform"
+												TileMode="None">
+                                                <DrawingBrush.Drawing>
+                                                    <DrawingGroup>
+                                                        <GeometryDrawing
+															Brush="#FFFFFFFF"
+															Geometry="M0,0 L0,0 L311,0 L311,296 L0,296" />
+                                                    </DrawingGroup>
+                                                </DrawingBrush.Drawing>
+                                            </DrawingBrush>
+                                        </DrawingGroup.OpacityMask>
+                                        <DrawingGroup>
+                                            <DrawingGroup.OpacityMask>
+                                                <DrawingBrush
+													ViewportUnits="Absolute"
+													ViewboxUnits="Absolute"
+													Viewport="87.0354995727539,226.539703369141,26.5925979614258,20.8737030029297"
+													Viewbox="87.0354995727539,226.539703369141,26.5925979614258,20.8737030029297"
+													Stretch="Uniform"
+													TileMode="None">
+                                                    <DrawingBrush.Drawing>
+                                                        <DrawingGroup>
+                                                            <GeometryDrawing
+																Brush="#FFFFFFFF"
+																Geometry="M0,0 L0,0 L311,0 L311,296 L0,296" />
+                                                        </DrawingGroup>
+                                                    </DrawingBrush.Drawing>
+                                                </DrawingBrush>
+                                            </DrawingGroup.OpacityMask>
+                                            <GeometryDrawing
+												Brush="#FF4772FA"
+												Geometry="M390,390 M0,0 M94.6381,237.5095 L94.6381,237.5095 L100.3902,237.5095 L101.9375,245.0455 L107.5075,243.9033 L106.1949,237.5095 L113.6281,237.5095 L113.6281,231.8283 L95.8044,231.8283 L96.8901,226.5397 L91.0862,226.5397 L87.0355,246.2725 L92.6047,247.4134" />
+                                        </DrawingGroup>
+                                    </DrawingGroup>
+                                    <DrawingGroup>
+                                        <DrawingGroup.OpacityMask>
+                                            <DrawingBrush
+												ViewportUnits="Absolute"
+												ViewboxUnits="Absolute"
+												Viewport="118.165199279785,226.539703369141,25.5152969360352,18.5057983398438"
+												Viewbox="118.165199279785,226.539703369141,25.5152969360352,18.5057983398438"
+												Stretch="Uniform"
+												TileMode="None">
+                                                <DrawingBrush.Drawing>
+                                                    <DrawingGroup>
+                                                        <GeometryDrawing
+															Brush="#FFFFFFFF"
+															Geometry="M0,0 L0,0 L311,0 L311,296 L0,296" />
+                                                    </DrawingGroup>
+                                                </DrawingBrush.Drawing>
+                                            </DrawingBrush>
+                                        </DrawingGroup.OpacityMask>
+                                        <DrawingGroup>
+                                            <DrawingGroup.OpacityMask>
+                                                <DrawingBrush
+													ViewportUnits="Absolute"
+													ViewboxUnits="Absolute"
+													Viewport="118.165199279785,226.539703369141,25.5152969360352,18.5057983398438"
+													Viewbox="118.165199279785,226.539703369141,25.5152969360352,18.5057983398438"
+													Stretch="Uniform"
+													TileMode="None">
+                                                    <DrawingBrush.Drawing>
+                                                        <DrawingGroup>
+                                                            <GeometryDrawing
+																Brush="#FFFFFFFF"
+																Geometry="M0,0 L0,0 L311,0 L311,296 L0,296" />
+                                                        </DrawingGroup>
+                                                    </DrawingBrush.Drawing>
+                                                </DrawingBrush>
+                                            </DrawingGroup.OpacityMask>
+                                            <GeometryDrawing
+												Brush="#FF4772FA"
+												Geometry="M390,390 M0,0 M124.7866,237.5095 L124.7866,237.5095 L129.7269,237.5095 L131.2742,245.0455 L136.8434,243.9033 L135.5308,237.5095 L143.6805,237.5095 L143.6805,231.8283 L125.9528,231.8283 L127.0385,226.5397 L121.2346,226.5397 L118.1652,241.4885 L123.7359,242.6294" />
+                                        </DrawingGroup>
+                                    </DrawingGroup>
+                                    <DrawingGroup>
+                                        <DrawingGroup.OpacityMask>
+                                            <DrawingBrush
+												ViewportUnits="Absolute"
+												ViewboxUnits="Absolute"
+												Viewport="247.646499633789,226.539398193359,63.3536529541016,69.0008239746094"
+												Viewbox="247.646499633789,226.539398193359,63.3536529541016,69.0008239746094"
+												Stretch="Uniform"
+												TileMode="None">
+                                                <DrawingBrush.Drawing>
+                                                    <DrawingGroup>
+                                                        <GeometryDrawing
+															Brush="#FFFFFFFF"
+															Geometry="M0,0 L0,0 L311,0 L311,296 L0,296" />
+                                                    </DrawingGroup>
+                                                </DrawingBrush.Drawing>
+                                            </DrawingBrush>
+                                        </DrawingGroup.OpacityMask>
+                                        <DrawingGroup>
+                                            <DrawingGroup.OpacityMask>
+                                                <DrawingBrush
+													ViewportUnits="Absolute"
+													ViewboxUnits="Absolute"
+													Viewport="247.646499633789,226.539398193359,63.3536529541016,69.0008239746094"
+													Viewbox="247.646499633789,226.539398193359,63.3536529541016,69.0008239746094"
+													Stretch="Uniform"
+													TileMode="None">
+                                                    <DrawingBrush.Drawing>
+                                                        <DrawingGroup>
+                                                            <GeometryDrawing
+																Brush="#FFFFFFFF"
+																Geometry="M0,0 L0,0 L311,0 L311,296 L0,296" />
+                                                        </DrawingGroup>
+                                                    </DrawingBrush.Drawing>
+                                                </DrawingBrush>
+                                            </DrawingGroup.OpacityMask>
+                                            <GeometryDrawing
+												Brush="#FF4772FA"
+												Geometry="M390,390 M0,0 M271.096879,269.162371 C262.027446,269.162371 254.649602,261.789423 254.649602,252.72757 C254.649602,243.665017 262.027446,236.292069 271.096879,236.292069 L276.480541,236.292069 L276.480541,250.089575 L262.672561,250.089575 L262.672561,255.770818 L276.480541,255.770818 L276.480541,269.162371 L271.096879,269.162371 M304.195264,252.72757 C304.195264,261.789423 296.817419,269.162371 287.747286,269.162371 L282.166097,269.162371 L282.166097,255.770818 L295.974077,255.770818 L295.974077,250.089575 L282.166097,250.089575 L282.166097,236.292069 L287.747286,236.292069 C296.817419,236.292069 304.195264,243.665017 304.195264,252.72757 L304.195264,252.72757 M311.00014,280.118905 L282.166097,280.118905 L282.166097,274.843614 L287.747286,274.843614 C299.951935,274.843614 309.88082,264.922261 309.88082,252.72757 C309.88082,243.443142 304.123818,235.482962 295.992289,232.20874 L297.156437,226.539396 L291.351805,226.539396 L290.480444,230.785105 C289.583868,230.674518 288.673282,230.610825 287.747286,230.610825 L271.096879,230.610825 C270.170883,230.610825 269.260298,230.674518 268.364422,230.785105 L267.492361,226.539396 L261.688428,226.539396 L262.851877,232.20874 C254.720347,235.482962 248.963345,243.443142 248.963345,252.72757 C248.963345,264.922261 258.89223,274.843614 271.096879,274.843614 L276.480541,274.843614 L276.480541,280.118905 L247.646498,280.118905 L247.646498,285.800148 L276.480541,285.800148 L276.480541,295.540223 L282.166097,295.540223 L282.166097,285.800148 L311.00014,285.800148 L311.00014,280.118905" />
+                                        </DrawingGroup>
+                                    </DrawingGroup>
+                                    <DrawingGroup>
+                                        <DrawingGroup.OpacityMask>
+                                            <DrawingBrush
+												ViewportUnits="Absolute"
+												ViewboxUnits="Absolute"
+												Viewport="110.605888366699,20.6373252868652,123.754890441895,105.3147315979"
+												Viewbox="110.605888366699,20.6373252868652,123.754890441895,105.3147315979"
+												Stretch="Uniform"
+												TileMode="None">
+                                                <DrawingBrush.Drawing>
+                                                    <DrawingGroup>
+                                                        <GeometryDrawing
+															Brush="#FFFFFFFF"
+															Geometry="M0,0 L0,0 L311,0 L311,296 L0,296" />
+                                                    </DrawingGroup>
+                                                </DrawingBrush.Drawing>
+                                            </DrawingBrush>
+                                        </DrawingGroup.OpacityMask>
+                                        <DrawingGroup>
+                                            <DrawingGroup.OpacityMask>
+                                                <DrawingBrush
+													ViewportUnits="Absolute"
+													ViewboxUnits="Absolute"
+													Viewport="110.605888366699,20.6373252868652,123.754890441895,105.3147315979"
+													Viewbox="110.605888366699,20.6373252868652,123.754890441895,105.3147315979"
+													Stretch="Uniform"
+													TileMode="None">
+                                                    <DrawingBrush.Drawing>
+                                                        <DrawingGroup>
+                                                            <GeometryDrawing
+																Brush="#FFFFFFFF"
+																Geometry="M0,0 L0,0 L311,0 L311,296 L0,296" />
+                                                        </DrawingGroup>
+                                                    </DrawingBrush.Drawing>
+                                                </DrawingBrush>
+                                            </DrawingGroup.OpacityMask>
+                                            <GeometryDrawing
+												Brush="#FFFFB000"
+												Geometry="M390,390 M0,0 M126.613283,72.5538271 L110.605889,92.0241775 L148.516369,123.087988 C150.782326,124.947673 153.612846,125.952057 156.519716,125.952057 C156.953995,125.952057 157.391076,125.92896 157.827457,125.884165 C161.181214,125.534206 164.253389,123.857899 166.361745,121.228303 L234.360774,36.3883057 L214.676716,20.6373256 L154.658619,95.5188737 L126.613283,72.5538271" />
+                                        </DrawingGroup>
+                                    </DrawingGroup>
+                                    <DrawingGroup>
+                                        <DrawingGroup.OpacityMask>
+                                            <DrawingBrush
+												ViewportUnits="Absolute"
+												ViewboxUnits="Absolute"
+												Viewport="59.5382881164551,-6.99919110047631E-05,191.923427581787,191.777840988005"
+												Viewbox="59.5382881164551,-6.99919110047631E-05,191.923427581787,191.777840988005"
+												Stretch="Uniform"
+												TileMode="None">
+                                                <DrawingBrush.Drawing>
+                                                    <DrawingGroup>
+                                                        <GeometryDrawing
+															Brush="#FFFFFFFF"
+															Geometry="M0,0 L0,0 L311,0 L311,296 L0,296" />
+                                                    </DrawingGroup>
+                                                </DrawingBrush.Drawing>
+                                            </DrawingBrush>
+                                        </DrawingGroup.OpacityMask>
+                                        <DrawingGroup>
+                                            <DrawingGroup.OpacityMask>
+                                                <DrawingBrush
+													ViewportUnits="Absolute"
+													ViewboxUnits="Absolute"
+													Viewport="59.5382881164551,-6.99919110047631E-05,191.923427581787,191.777840988005"
+													Viewbox="59.5382881164551,-6.99919110047631E-05,191.923427581787,191.777840988005"
+													Stretch="Uniform"
+													TileMode="None">
+                                                    <DrawingBrush.Drawing>
+                                                        <DrawingGroup>
+                                                            <GeometryDrawing
+																Brush="#FFFFFFFF"
+																Geometry="M0,0 L0,0 L311,0 L311,296 L0,296" />
+                                                        </DrawingGroup>
+                                                    </DrawingBrush.Drawing>
+                                                </DrawingBrush>
+                                            </DrawingGroup.OpacityMask>
+                                            <GeometryDrawing
+												Brush="#FF4772FA"
+												Geometry="M390,390 M0,0 M155.5,170.202765 C114.492128,170.202765 81.1296734,136.865616 81.1296734,95.888851 C81.1296734,54.9120854 114.492128,21.5749372 155.5,21.5749372 L155.5,-6.99919132E-05 C102.586572,-6.99919132E-05 59.5382883,43.01556 59.5382883,95.888851 C59.5382883,148.762142 102.586572,191.777772 155.5,191.777772 C208.413428,191.777772 251.461712,148.762142 251.461712,95.888851 L229.870327,95.888851 C229.870327,136.865616 196.507872,170.202765 155.5,170.202765" />
+                                        </DrawingGroup>
+                                    </DrawingGroup>
+                                </DrawingGroup>
+                            </DrawingGroup>
+                        </DrawingGroup>
+                    </DrawingGroup>
+                </DrawingImage.Drawing>
+            </DrawingImage>
+            <Style
+				TargetType="{x:Type TextBlock}"
+				x:Key="TextBlockStyle">
+                <Setter
+					Property="Foreground"
+					Value="{DynamicResource PrimaryColor}" />
+            </Style>
+            <Style
+				TargetType="{x:Type Line}"
+				x:Key="lineStyle">
+                <Setter
+					Property="Line.X1"
+					Value="0" />
+                <Setter
+					Property="Line.X2"
+					Value="100" />
+                <Setter
+					Property="UIElement.Opacity"
+					Value="0.12" />
+                <Setter
+					Property="Stroke"
+					Value="#FF000000" />
+                <Setter
+					Property="Shape.Stretch"
+					Value="Uniform" />
+            </Style>
+            <Storyboard
+				x:Key="ShowStory">
+                <DoubleAnimation
+					BeginTime="0:0:0"
+					Duration="0:0:0.120"
+					Storyboard.TargetProperty="Opacity"
+					From="0"
+					To="1" />
+            </Storyboard>
+            <Storyboard
+				x:Key="HideStory">
+                <DoubleAnimation
+					BeginTime="0:0:0"
+					Duration="0:0:0.120"
+					Storyboard.TargetProperty="Opacity"
+					From="1"
+					To="0" />
+            </Storyboard>
+            <Style
+				TargetType="{x:Type TextBox}"
+				BasedOn="{x:Null}"
+				x:Key="TextBoxStyle">
+                <Setter
+					Property="BorderThickness"
+					Value="1" />
+                <Setter
+					Property="BorderBrush"
+					Value="#1A191919" />
+                <Setter
+					Property="Background"
+					Value="{DynamicResource PopupBackground}" />
+                <Setter
+					Property="Foreground"
+					Value="#D8191919" />
+                <Setter
+					Property="TextBoxBase.CaretBrush"
+					Value="#D8191919" />
+                <Setter
+					Property="VerticalAlignment"
+					Value="Center" />
+                <Setter
+					Property="VerticalContentAlignment"
+					Value="Center" />
+                <Setter
+					Property="HorizontalContentAlignment"
+					Value="Stretch" />
+                <Setter
+					Property="Padding"
+					Value="8,0" />
+                <Setter
+					Property="UIElement.AllowDrop"
+					Value="True" />
+                <Setter
+					Property="FontSize"
+					Value="14" />
+                <Setter
+					Property="FrameworkElement.FocusVisualStyle"
+					Value="{x:Null}" />
+                <Setter
+					Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate
+							TargetType="{x:Type TextBox}">
+                            <Border
+								Name="bg"
+								BorderBrush="{TemplateBinding BorderBrush}"
+								CornerRadius="4"
+								BorderThickness="1">
+                                <Grid>
+                                    <ScrollViewer
+										Name="PART_ContentHost" />
+                                    <TextBlock
+										Name="hintText"
+										Text="{TemplateBinding Tag}"
+										Visibility="Collapsed"
+										Style="{DynamicResource Body05}"
+										Foreground="#66191919"
+										Padding="10,0"
+										FontSize="{TemplateBinding FontSize}" />
+                                </Grid>
+                            </Border>
+                            <ControlTemplate.Triggers>
+                                <Trigger
+									Property="UIElement.IsFocused"
+									Value="True">
+                                    <Setter
+										Property="BorderBrush"
+										Value="#894667CF" />
+                                    <Setter
+										TargetName="bg"
+										Property="Background"
+										Value="#0F2C4276" />
+                                </Trigger>
+                                <Trigger
+									Property="UIElement.IsFocused"
+									Value="False">
+                                    <Setter
+										Property="BorderBrush"
+										Value="#1A191919" />
+                                    <Setter
+										TargetName="bg"
+										Property="Background"
+										Value="#00FFFFFF" />
+                                </Trigger>
+                                <Trigger
+									Property="Text"
+									Value="{x:Null}">
+                                    <Setter
+										TargetName="hintText"
+										Property="Visibility"
+										Value="Visible" />
+                                </Trigger>
+                                <Trigger
+									Property="Text"
+									Value="">
+                                    <Setter
+										TargetName="hintText"
+										Property="Visibility"
+										Value="Visible" />
+                                </Trigger>
+                            </ControlTemplate.Triggers>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+
+            <Style
+                TargetType="{x:Type Border}"
+                x:Key="SmoothHoverBorderStyle40_60">
+                <Setter
+                    Property="BorderThickness"
+                    Value="0" />
+                <Setter
+                    Property="UIElement.Opacity"
+                    Value="0.4" />
+                <Setter
+                    Property="Background"
+                    Value="#00FFFFFF" />
+                <Style.Triggers>
+                    <Trigger
+                        Property="UIElement.IsMouseOver"
+                        Value="True">
+                        <TriggerBase.EnterActions>
+                            <BeginStoryboard>
+                                <Storyboard>
+                                    <DoubleAnimation
+                                        Duration="0:0:0.09"
+                                        To="0.6"
+                                        Storyboard.TargetProperty="Opacity">
+                                        <DoubleAnimation.EasingFunction>
+                                            <CubicEase
+                                                EasingMode="EaseIn" />
+                                        </DoubleAnimation.EasingFunction>
+                                    </DoubleAnimation>
+                                </Storyboard>
+                            </BeginStoryboard>
+                        </TriggerBase.EnterActions>
+                        <TriggerBase.ExitActions>
+                            <BeginStoryboard>
+                                <Storyboard>
+                                    <DoubleAnimation
+                                        Duration="0:0:0.09"
+                                        To="0.4"
+                                        Storyboard.TargetProperty="Opacity">
+                                        <DoubleAnimation.EasingFunction>
+                                            <CubicEase
+                                                EasingMode="EaseOut" />
+                                        </DoubleAnimation.EasingFunction>
+                                    </DoubleAnimation>
+                                </Storyboard>
+                            </BeginStoryboard>
+                        </TriggerBase.ExitActions>
+                    </Trigger>
+                </Style.Triggers>
+            </Style>
+            <Style x:Key="SaveButtonStyle" TargetType="{x:Type Button}">
+                <Setter Property="Control.FontSize" Value="13"/>
+                <Setter Property="Control.Background" Value="{DynamicResource PrimaryColor}"/>
+                <Setter Property="FrameworkElement.Height" Value="30"/>
+                <Setter Property="FrameworkElement.Cursor" Value="Hand"/>
+                <Setter Property="Control.Foreground" Value="#E8FFFFFF"/>
+                <Setter Property="Control.BorderThickness" Value="0"/>
+                <Setter Property="FrameworkElement.Tag" Value="6"/>
+                <Setter Property="UIElement.Opacity" Value="1"/>
+                <Setter Property="Control.BorderBrush" Value="Transparent"/>
+                <Setter Property="Control.Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="{x:Type Button}">
+                            <Grid>
+                                <Border Background="{TemplateBinding Control.Background}"
+                    Height="{TemplateBinding FrameworkElement.Height}"
+                    BorderThickness="{TemplateBinding Control.BorderThickness}"
+                    BorderBrush="{TemplateBinding Control.BorderBrush}"
+                    CornerRadius="{TemplateBinding Tag, Converter={StaticResource TagCornerConverter}}"/>
+                                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" Margin="8,0,8,0"/>
+                                <Border Name="cover" Background="#0F191919" Visibility="Collapsed"
+                    CornerRadius="{TemplateBinding Tag, Converter={StaticResource TagCornerConverter}}"/>
+                            </Grid>
+                            <ControlTemplate.Triggers>
+                                <Trigger Property="UIElement.IsMouseOver" Value="true">
+                                    <Setter TargetName="cover" Property="UIElement.Visibility" Value="Visible"/>
+                                </Trigger>
+                            </ControlTemplate.Triggers>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+                <Style.Triggers>
+                    <Trigger Property="UIElement.IsEnabled" Value="False">
+                        <Setter Property="UIElement.Opacity" Value="0.2"/>
+                        <Setter Property="Control.Foreground" Value="#99FFFFFF"/>
+                    </Trigger>
+                </Style.Triggers>
+            </Style>
+        </ResourceDictionary>
+    </Window.Resources>
+    <Border Style="{DynamicResource WindowBorderStyle}" CornerRadius="12" Background="White">
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition Width="334"/>
+            </Grid.ColumnDefinitions>
+            <Grid Column="0">
+                <Border Opacity="0.2" CornerRadius="12,0,0,12">
+                    <Border.Background>
+                        <LinearGradientBrush StartPoint="1,0" EndPoint="1,1">
+                            <GradientStop Color="#7DABFD" Offset="0"/>
+                            <GradientStop Color="#4772FA" Offset="1"/>
+                        </LinearGradientBrush>
+                    </Border.Background>
+                </Border>
+                <ContentControl cal:View.Model="{Binding LogInCarouselView}"/>
+            </Grid>
+            <Grid MouseLeftButtonDown="DragMove" ColumnSpan="2" VerticalAlignment="Top" Height="40"
+                  Background="Transparent"/>
+            <Grid Grid.Column="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Grid Row="0" 
+                      VerticalAlignment="Top"
+                      HorizontalAlignment="Left" 
+                      Height="24" 
+                      Width="24" 
+                      cal:Message.Attach="[MouseLeftButtonDown]=[BackToPrevieousView]"
+                      Margin="10" 
+                      Background="Transparent"
+                      Cursor="Hand" 
+                      Visibility="{Binding IsPreviousShow,Converter={StaticResource BooleanToVisibilityConverter}}">
+                    <Path Fill="#CC191919" Stretch="Uniform" Height="24" Width="24" RenderTransformOrigin="0.5,0.5"
+                          Data="{Binding Source={StaticResource ArrowLine}, Path=Data}">
+                        <UIElement.RenderTransform>
+                            <RotateTransform Angle="90"/>
+                        </UIElement.RenderTransform>
+                    </Path>
+                </Grid>
+                <Grid Row="0" 
+                      VerticalAlignment="Top" 
+                      HorizontalAlignment="Right"
+                      Height="24" 
+                      Width="24" 
+                      Margin="10" 
+                      cal:Message.Attach="[MouseLeftButtonUp]=[CloseView]"
+                      Background="Transparent" 
+                      Cursor="Hand">
+                    <Path Fill="#CC191919" Stretch="Uniform" Height="16" Width="16"
+                          Data="{Binding Source={StaticResource IcClose}, Path=Data}"/>
+                </Grid>
+                <Image Grid.Row="0" Width="115" Height="115"
+                       Source="{StaticResource DidaLogoDrawingImage}" Visibility="Visible" VerticalAlignment="Top"
+                       Margin="11,100,0,-20"/>
+                <Image  Grid.Row="0" Width="120" Height="115"
+                       Source="{StaticResource TickLogoDrawingImage}" Visibility="Collapsed" VerticalAlignment="Top" Margin="2,100,0,-20"/>
+
+                <Grid  Row="0" 
+                       RowSpan="2"
+                       VerticalAlignment="Stretch" 
+                       Opacity="0" 
+                       ZIndex="100" 
+                       IsHitTestVisible="false">
+                    <Border Background="#1A191919" CornerRadius="0,12,12,0">
+                        <Border VerticalAlignment="Bottom" Margin="0,0,0,85" Background="White" HorizontalAlignment="Center"
+                                Height="55" 
+                                CornerRadius="8">
+                        </Border>
+                    </Border>
+                </Grid>
+                <Grid Grid.Row="1"
+                      IsHitTestVisible="True">
+                    <!--登录主页 -->
+                    <StackPanel  
+                             Visibility="{Binding IsLogInView,Converter={StaticResource BooleanToVisibilityConverter}}"
+                             Margin="0,70,0,0">
+                        <Button  Style="{DynamicResource SaveButtonStyle}" 
+                             Background="#07C160" 
+                             Height="40"
+                             Width="270" 
+                             Tag="8" 
+                             cal:Message.Attach="WeChatLogIn">
+                            <ContentControl.Content>
+                                <StackPanel HorizontalAlignment="Center" Orientation="Horizontal">
+                                    <Path Fill="White" 
+                                      Width="24" 
+                                      Height="24" 
+                                      Stretch="Uniform" 
+                                      Margin="-4,0,0,0"
+                                      Data="F1 M24,24 M0,0 M16.6575875,13.3304506 C16.2897677,13.3304506 15.9902064,13.0288681 15.9902064,12.6545222 C15.9902064,12.2822869 16.2897677,11.9807044 16.6575875,11.9807044 C17.0254417,11.9807044 17.3249497,12.2822869 17.3249497,12.6545222 C17.3249497,13.0288681 17.0254589,13.3304506 16.6575875,13.3304506 M13.2248445,13.3304506 C12.8569714,13.3304506 12.5574634,13.0288681 12.5574634,12.6545222 C12.5574634,12.2822869 12.8569714,11.9807044 13.2248445,11.9807044 C13.5926299,11.9807044 13.892119,12.2822869 13.892119,12.6545222 C13.892119,13.0288681 13.5926471,13.3304506 13.2248445,13.3304506 M19.7225177,14.290585 C19.7225177,12.1069106 17.7784201,10.3189445 15.3143828,10.1648068 C15.1990929,10.1585102 15.083539,10.1541484 14.9680732,10.1541484 C12.3414936,10.1541484 10.2133521,12.0063787 10.2133521,14.2905829 C10.2133521,14.6350466 10.2626163,14.968622 10.3544965,15.2873009 C10.8656069,17.0905296 12.7370649,18.4272718 14.9680566,18.4272718 C15.7272293,18.4272718 16.4436619,18.2731473 17.0788215,17.9972245 L18.1461029,18.7266027 C18.1461029,18.7266027 18.4306784,18.9254881 18.4029068,18.5425966 L18.1013243,17.4005306 C19.0959128,16.6433447 19.7225177,15.5310956 19.7225177,14.2905863 M7.68746089,9.63868091 C7.3194125,9.63868091 7.02009871,9.33727368 7.02009871,8.96503841 C7.02009871,8.59078188 7.3194125,8.28919762 7.68746089,8.28919762 C8.05735695,8.28919762 8.35475261,8.59078016 8.35475261,8.96503841 C8.35473502,9.33725478 8.05735523,9.63868091 7.68746089,9.63868091 M11.8901017,8.28918215 C12.2581501,8.28918215 12.5574639,8.59076469 12.5574639,8.96502294 C12.5574639,9.33725822 12.2581501,9.63866544 11.8901017,9.63866544 C11.5202057,9.63866544 11.2227206,9.33725822 11.2227206,8.96502294 C11.2227206,8.59076641 11.5202057,8.28918215 11.8901017,8.28918215 M14.96806,9.80968986 C15.0705985,9.80968986 15.1710446,9.81413964 15.2717532,9.81850149 C14.8802954,7.50628161 12.5917204,5.73089673 9.82626557,5.73089673 C6.78699641,5.73089673 4.32294198,7.87639767 4.32294198,10.5198554 C4.32294198,11.9936148 5.08865803,13.3110571 6.29074114,14.1901472 L5.88426317,15.723671 C5.88426317,15.723671 5.74538749,16.232688 6.27151862,16.0040252 L7.78791164,14.9686319 C8.41885003,15.1889759 9.10543645,15.3109849 9.82626557,15.3109849 C9.88826353,15.3109849 9.94802798,15.3066231 10.0079325,15.3066231 C9.92023816,14.9792902 9.87324284,14.6392609 9.87324284,14.2906825 C9.87324283,11.8203718 12.1595611,9.80968979 14.9680535,9.80968979" />
+                                    <TextBlock 
+                                      Text="{x:Static resx:Strings.LogInCarouselControlViewModel_WechatLogIn}" 
+                                      VerticalAlignment="Center" 
+                                      Margin="8,0,0,0"/>
+                                </StackPanel>
+                            </ContentControl.Content>
+                        </Button>
+                        <Button  Style="{DynamicResource SaveButtonStyle}" Background="#4772FA"
+                             Height="40" 
+                             Width="270" 
+                             Tag="8" 
+                             cal:Message.Attach="AccoutLogIn"
+                             Margin="0,14,0,0">
+                            <ContentControl.Content>
+                                <StackPanel HorizontalAlignment="Center" Orientation="Horizontal">
+                                    <Path Fill="White" 
+                                      Width="24" 
+                                      Height="24" 
+                                      Stretch="Uniform" 
+                                      Margin="-4,0,-1,0"
+                                      Data="F1 M25,24 M0,0 M11.8615326,12.2217264 C13.8826979,12.2217264 15.5259467,10.6029581 15.5259467,8.61086319 C15.5259467,6.62029836 13.8826979,5 11.8615326,5 C9.84036721,5 8.19711845,6.62029836 8.19711845,8.61086319 C8.19711845,10.601428 9.84189723,12.2217264 11.8615326,12.2217264 M13.371669,12.5690425 L10.626801,12.5690425 C8.07471631,12.5690425 6,14.6131582 6,17.1254622 L6,17.3962769 C6,18.7090399 8.04258575,18.7090399 10.626801,18.7090399 L13.373199,18.7090399 C15.8564325,18.7090399 18,18.7090399 18,17.3962769 L18,17.1254622 C17.99847,14.6131582 15.9237537,12.5690425 13.371669,12.5690425" />
+                                    <TextBlock 
+                                    Text="{x:Static resx:Strings.LogInCarouselControlViewModel_AccountLogIn}" 
+                                    VerticalAlignment="Center" 
+                                    Margin="8,0,0,0"/>
+                                </StackPanel>
+                            </ContentControl.Content>
+                        </Button>
+                        <Border  
+                        Margin="0,20,0,0" 
+                        Background="Transparent" 
+                        Cursor="Hand"
+                        HorizontalAlignment="Center">
+                            <TextBlock 
+                            Text="{x:Static resx:Strings.LogInCarouselControlViewModel_MoreLogInMethods}" 
+                            HorizontalAlignment="Center" 
+                            VerticalAlignment="Center"
+                            FontSize="13" 
+                            Foreground="#66191919" 
+                            Margin="10,4"/>
+                        </Border>
+                    </StackPanel>
+
+                    <!-- 创建账户 -->
+                    <Grid 
+                          Visibility="{Binding IsCreateAccountView,UpdateSourceTrigger=PropertyChanged,Converter= {StaticResource BooleanToVisibilityConverter}}">
+                        <StackPanel
+                            Width="240"
+                            VerticalAlignment="Top"
+                            Margin="0,40,0,20">
+                            <!-- 昵称输入框 -->
+                            <TextBox
+                                MaxLength="40"
+                                Height="36"
+                                Style="{StaticResource TextBoxStyle}"
+                                Cursor="IBeam"
+                                VerticalContentAlignment="Center"
+                                VerticalAlignment="Center"
+                                Tag="{x:Static resx:Strings.LogInCarouselControlViewModel_CreateAccount_NicName}"/>
+                            <Grid
+								Margin="0,12,0,0"
+								Height="40">
+                                <!--邮箱-->
+                                <TextBox
+									Height="36"
+                                    Tag="{x:Static resx:Strings.LogInCarouselControlViewModel_CreateAccount_Email}"
+									Padding="8,0,20,0"
+									VerticalAlignment="Center">
+                                    <FrameworkElement.Style>
+                                        <Style
+											BasedOn="{StaticResource TextBoxStyle}"
+											TargetType="{x:Type TextBox}">
+                                        </Style>
+                                    </FrameworkElement.Style>
+                                </TextBox>
+                                <Border
+									HorizontalAlignment="Right"
+									Background="Red"
+									Cursor="Hand"
+									Margin="0,0,8,0">
+                                    <FrameworkElement.Style>
+                                        <Style
+											BasedOn="{StaticResource SmoothHoverBorderStyle40_60}"
+											TargetType="{x:Type Border}">
+                                            <Setter
+												Property="Visibility"
+												Value="Visible" />
+                                            <Style.Triggers>
+                                                <DataTrigger
+													Value=""
+													Binding="{Binding ElementName=emailTextBlock, Path=Text}">
+                                                    <Setter
+														Property="Visibility"
+														Value="Collapsed" />
+                                                </DataTrigger>
+                                                <DataTrigger
+													Binding="{Binding ElementName=emailTextBlock, Path=Text}"
+													Value="{x:Null}">
+                                                    <Setter
+														Property="Visibility"
+														Value="Collapsed" />
+                                                </DataTrigger>
+                                            </Style.Triggers>
+                                        </Style>
+                                    </FrameworkElement.Style>
+                                    <Path
+										Width="14"
+										Height="14"
+										Fill="Blue"
+										Stretch="Uniform"
+										VerticalAlignment="Center"
+										HorizontalAlignment="Right"
+                                        Data="M 16,16 0,0 7.99999674613953,8.94280674613953 L 12.8619667461395,13.8047667461395 Q 12.9083667461395,13.8511667461395 12.9629667461395,13.8876667461395 13.0175667461395,13.9241667461395 13.0781667461395,13.9492667461395 13.1388667461395,13.9743667461395 13.2032667461395,13.9871667461395 13.2676667461395,13.9999667461395 13.3333667461395,13.9999667461395 13.3989667461395,13.9999667461395 13.4633667461395,13.9871667461395 13.5277667461395,13.9743667461395 13.5884667461395,13.9492667461395 13.6491667461395,13.9241667461395 13.7036667461395,13.8876667461395 13.7582667461395,13.8511667461395 13.8047667461395,13.8047667461395 13.8511667461395,13.7582667461395 13.8876667461395,13.7036667461395 13.9241667461395,13.6490667461395 13.9492667461395,13.5884667461395 13.9743667461395,13.5277667461395 13.9871667461395,13.4633667461395 13.9999667461395,13.3989667461395 13.9999667461395,13.3333667461395 13.9999667461395,13.2676667461395 13.9871667461395,13.2032667461395 13.9743667461395,13.1388667461395 13.9492667461395,13.0781667461395 13.9241667461395,13.0175667461395 13.8876667461395,12.9629667461395 13.8511667461395,12.9083667461395 13.8047667461395,12.8619667461395 L 8.94280674613953,7.99999674613953 13.8047667461395,3.13807174613953 Q 13.8511667461395,3.09164174613953 13.8876667461395,3.03704674613953 13.9241667461395,2.98245174613953 13.9492667461395,2.92178874613953 13.9743667461395,2.86112574613953 13.9871667461395,2.79672674613953 13.9999667461395,2.73232764613953 13.9999667461395,2.66666674613953 13.9999667461395,2.60100584613953 13.9871667461395,2.53660674613953 13.9743667461395,2.47220774613953 13.9492667461395,2.41154474613953 13.9241667461395,2.35088174613953 13.8876667461395,2.29628674613953 13.8511667461395,2.24169174613953 13.8047667461395,2.19526174613953 13.7109667461395,2.10149374613953 13.5884667461395,2.05074674613953 13.4659667461395,1.99999974613953 13.3333667461395,1.99999974613953 13.2007667461395,1.99999974613953 13.0781667461395,2.05074674613953 12.9556667461395,2.10149374613953 12.8619667461395,2.19526174613953 L 7.99999674613953,7.05718674613953 3.13807174613953,2.19526174613953 Q 3.09164174613953,2.14883274613953 3.03704674613953,2.11235374613953 2.98245174613953,2.07587474613953 2.92178874613953,2.05074674613953 2.86112574613953,2.02561974613953 2.79672674613953,2.01280974613953 2.73232764613953,1.99999974613953 2.66666674613953,1.99999974613953 2.60100584613953,1.99999974613953 2.53660674613953,2.01280974613953 2.47220774613953,2.02561974613953 2.41154474613953,2.05074674613953 2.35088174613953,2.07587474613953 2.29628674613953,2.11235374613953 2.24169174613953,2.14883274613953 2.19526174613953,2.19526174613953 2.14883274613953,2.24169174613953 2.11235374613953,2.29628674613953 2.07587474613953,2.35088174613953 2.05074674613953,2.41154474613953 2.02561974613953,2.47220774613953 2.01280974613953,2.53660674613953 1.99999974613953,2.60100584613953 1.99999974613953,2.66666674613953 1.99999974613953,2.73232764613953 2.01280974613953,2.79672674613953 2.02561974613953,2.86112574613953 2.05074674613953,2.92178874613953 2.07587474613953,2.98245174613953 2.11235374613953,3.03704674613953 2.14883274613953,3.09164174613953 2.19526174613953,3.13807174613953 L 7.05718674613953,7.99999674613953 2.19526174613953,12.8619667461395 Q 2.10149374613953,12.9556667461395 2.05074674613953,13.0781667461395 1.99999974613953,13.2007667461395 1.99999974613953,13.3333667461395 1.99999974613953,13.4659667461395 2.05074674613953,13.5884667461395 2.10149374613953,13.7109667461395 2.19526174613953,13.8047667461395 2.24169174613953,13.8511667461395 2.29628674613953,13.8876667461395 2.35088174613953,13.9241667461395 2.41154474613953,13.9492667461395 2.47220774613953,13.9743667461395 2.53660674613953,13.9871667461395 2.60100584613953,13.9999667461395 2.66666674613953,13.9999667461395 2.73232764613953,13.9999667461395 2.79672674613953,13.9871667461395 2.86112574613953,13.9743667461395 2.92178874613953,13.9492667461395 2.98245174613953,13.9241667461395 3.03704674613953,13.8876667461395 3.09164174613953,13.8511667461395 3.13807174613953,13.8047667461395 L 7.99999674613953,8.94280674613953 Z"/>
+                                </Border>
+                            </Grid>
+                            <!-- 密码输入框 -->
+                            <PasswordBox
+								Height="36"
+								FontSize="14"
+								Margin="0,12,0,0"
+								BorderThickness="1"
+								Padding="8,0"
+								Tag="{x:Static resx:Strings.LogInCarouselControlViewModel_CreateAccount_Password}"
+								Cursor="IBeam">
+                                <FrameworkElement.Style>
+                                    <Style
+										TargetType="{x:Type PasswordBox}">
+                                        <!--<Setter
+											Property="local:PasswordBoxMonitor.IsMonitoring"
+											Value="True" />-->
+                                        <Setter
+											Property="Template">
+                                            <Setter.Value>
+                                                <ControlTemplate
+													TargetType="{x:Type PasswordBox}">
+                                                    <Border
+														Name="border"
+														BorderBrush="#1A191919"
+														BorderThickness="1"
+														Background="#00FFFFFF"
+														CornerRadius="4">
+                                                        <Grid>
+                                                            <ScrollViewer
+																Name="PART_ContentHost"
+																Opacity="0.85"
+																VerticalAlignment="Center"
+																HorizontalAlignment="Left" />
+                                                            <TextBlock
+																Name="hintText"
+																Text="{TemplateBinding Tag}"
+																Visibility="Collapsed"
+																Style="{DynamicResource Body05}"
+																Foreground="#66191919"
+																Padding="10,0"
+																FontSize="{TemplateBinding FontSize}" />
+                                                        </Grid>
+                                                    </Border>
+                                                    <ControlTemplate.Triggers>
+                                                        <Trigger
+															Property="UIElement.IsFocused"
+															Value="True">
+                                                            <Setter
+																TargetName="border"
+																Property="BorderBrush"
+																Value="#894667CF" />
+                                                            <Setter
+																TargetName="border"
+																Property="Background"
+																Value="#0F2C4276" />
+                                                        </Trigger>
+                                                        <Trigger
+															Property="UIElement.IsFocused"
+															Value="False">
+                                                            <Setter
+																TargetName="border"
+																Property="BorderBrush"
+																Value="#1A191919" />
+                                                            <Setter
+																TargetName="border"
+																Property="Background"
+																Value="#00FFFFFF" />
+                                                        </Trigger>
+                                                        <!--<Trigger
+															Property="local:PasswordBoxMonitor.PasswordLength"
+															Value="0">
+                                                            <Setter
+																TargetName="hintText"
+																Property="Visibility"
+																Value="Visible" />
+                                                        </Trigger>-->
+                                                        <DataTrigger
+															Value="True"
+															Binding="{Binding ElementName=PasswordRemainderTimesText, Path=IsVisible}">
+                                                            <Setter
+																TargetName="border"
+																Property="BorderBrush"
+																Value="#FFFF0000" />
+                                                        </DataTrigger>
+                                                    </ControlTemplate.Triggers>
+                                                </ControlTemplate>
+                                            </Setter.Value>
+                                        </Setter>
+                                    </Style>
+                                </FrameworkElement.Style>
+                            </PasswordBox>
+                            <Grid
+								Margin="0,14,0,0">
+                                <Button
+									IsEnabled="True"
+									Height="36"
+                                    Content="{x:Static resx:Strings.LogInCarouselControlViewModel_CreateAccount_Create}"
+									Style="{StaticResource SaveButtonStyle}"
+									Background="#4B6FDE"/>
+                            </Grid>
+                        </StackPanel>
+
+                    </Grid>
+
+                    <!--账号登录-->
+                    <Grid 
+                      Visibility="{Binding IsAccountLogInView,UpdateSourceTrigger=PropertyChanged,Converter={StaticResource BooleanToVisibilityConverter}}">
+                        <StackPanel
+							Width="240"
+							VerticalAlignment="Top"
+                            Orientation="Vertical"
+							Margin="0,40,0,20">
+                            <Grid
+								Margin="0,12,0,0"
+								Height="40">
+                                <TextBox
+									Height="36"
+									Padding="8,0,20,0"
+									VerticalAlignment="Center"
+                                    BorderBrush="Blue"
+                                    Tag="手机号码/邮箱"
+                                    Text="{Binding UserName,UpdateSourceTrigger=PropertyChanged}"
+                                    VerticalContentAlignment="Center"
+									Cursor="IBeam">
+                                    <FrameworkElement.Style>
+                                        <Style
+											BasedOn="{StaticResource TextBoxStyle}"
+											TargetType="{x:Type TextBox}">
+                                        </Style>
+                                    </FrameworkElement.Style>
+                                </TextBox>
+                                <Border
+									HorizontalAlignment="Right"
+									Background="Red"
+									Cursor="Hand"
+									Margin="0,0,8,0">
+                                    <FrameworkElement.Style>
+                                        <Style
+											BasedOn="{StaticResource SmoothHoverBorderStyle40_60}"
+											TargetType="{x:Type Border}">
+                                            <Setter
+												Property="Visibility"
+												Value="Visible" />
+                                            <Style.Triggers>
+                                                <DataTrigger
+													Value=""
+													Binding="{Binding ElementName=emailTextBlock, Path=Text}">
+                                                    <Setter
+														Property="Visibility"
+														Value="Collapsed" />
+                                                </DataTrigger>
+                                                <DataTrigger
+													Binding="{Binding ElementName=emailTextBlock, Path=Text}"
+													Value="{x:Null}">
+                                                    <Setter
+														Property="Visibility"
+														Value="Collapsed" />
+                                                </DataTrigger>
+                                            </Style.Triggers>
+                                        </Style>
+                                    </FrameworkElement.Style>
+                                    <Path
+										Width="14"
+										Height="14"
+										Fill="Blue"
+										Stretch="Uniform"
+										VerticalAlignment="Center"
+										HorizontalAlignment="Right"
+                                        Data="M 16,16 0,0 7.99999674613953,8.94280674613953 L 12.8619667461395,13.8047667461395 Q 12.9083667461395,13.8511667461395 12.9629667461395,13.8876667461395 13.0175667461395,13.9241667461395 13.0781667461395,13.9492667461395 13.1388667461395,13.9743667461395 13.2032667461395,13.9871667461395 13.2676667461395,13.9999667461395 13.3333667461395,13.9999667461395 13.3989667461395,13.9999667461395 13.4633667461395,13.9871667461395 13.5277667461395,13.9743667461395 13.5884667461395,13.9492667461395 13.6491667461395,13.9241667461395 13.7036667461395,13.8876667461395 13.7582667461395,13.8511667461395 13.8047667461395,13.8047667461395 13.8511667461395,13.7582667461395 13.8876667461395,13.7036667461395 13.9241667461395,13.6490667461395 13.9492667461395,13.5884667461395 13.9743667461395,13.5277667461395 13.9871667461395,13.4633667461395 13.9999667461395,13.3989667461395 13.9999667461395,13.3333667461395 13.9999667461395,13.2676667461395 13.9871667461395,13.2032667461395 13.9743667461395,13.1388667461395 13.9492667461395,13.0781667461395 13.9241667461395,13.0175667461395 13.8876667461395,12.9629667461395 13.8511667461395,12.9083667461395 13.8047667461395,12.8619667461395 L 8.94280674613953,7.99999674613953 13.8047667461395,3.13807174613953 Q 13.8511667461395,3.09164174613953 13.8876667461395,3.03704674613953 13.9241667461395,2.98245174613953 13.9492667461395,2.92178874613953 13.9743667461395,2.86112574613953 13.9871667461395,2.79672674613953 13.9999667461395,2.73232764613953 13.9999667461395,2.66666674613953 13.9999667461395,2.60100584613953 13.9871667461395,2.53660674613953 13.9743667461395,2.47220774613953 13.9492667461395,2.41154474613953 13.9241667461395,2.35088174613953 13.8876667461395,2.29628674613953 13.8511667461395,2.24169174613953 13.8047667461395,2.19526174613953 13.7109667461395,2.10149374613953 13.5884667461395,2.05074674613953 13.4659667461395,1.99999974613953 13.3333667461395,1.99999974613953 13.2007667461395,1.99999974613953 13.0781667461395,2.05074674613953 12.9556667461395,2.10149374613953 12.8619667461395,2.19526174613953 L 7.99999674613953,7.05718674613953 3.13807174613953,2.19526174613953 Q 3.09164174613953,2.14883274613953 3.03704674613953,2.11235374613953 2.98245174613953,2.07587474613953 2.92178874613953,2.05074674613953 2.86112574613953,2.02561974613953 2.79672674613953,2.01280974613953 2.73232764613953,1.99999974613953 2.66666674613953,1.99999974613953 2.60100584613953,1.99999974613953 2.53660674613953,2.01280974613953 2.47220774613953,2.02561974613953 2.41154474613953,2.05074674613953 2.35088174613953,2.07587474613953 2.29628674613953,2.11235374613953 2.24169174613953,2.14883274613953 2.19526174613953,2.19526174613953 2.14883274613953,2.24169174613953 2.11235374613953,2.29628674613953 2.07587474613953,2.35088174613953 2.05074674613953,2.41154474613953 2.02561974613953,2.47220774613953 2.01280974613953,2.53660674613953 1.99999974613953,2.60100584613953 1.99999974613953,2.66666674613953 1.99999974613953,2.73232764613953 2.01280974613953,2.79672674613953 2.02561974613953,2.86112574613953 2.05074674613953,2.92178874613953 2.07587474613953,2.98245174613953 2.11235374613953,3.03704674613953 2.14883274613953,3.09164174613953 2.19526174613953,3.13807174613953 L 7.05718674613953,7.99999674613953 2.19526174613953,12.8619667461395 Q 2.10149374613953,12.9556667461395 2.05074674613953,13.0781667461395 1.99999974613953,13.2007667461395 1.99999974613953,13.3333667461395 1.99999974613953,13.4659667461395 2.05074674613953,13.5884667461395 2.10149374613953,13.7109667461395 2.19526174613953,13.8047667461395 2.24169174613953,13.8511667461395 2.29628674613953,13.8876667461395 2.35088174613953,13.9241667461395 2.41154474613953,13.9492667461395 2.47220774613953,13.9743667461395 2.53660674613953,13.9871667461395 2.60100584613953,13.9999667461395 2.66666674613953,13.9999667461395 2.73232764613953,13.9999667461395 2.79672674613953,13.9871667461395 2.86112574613953,13.9743667461395 2.92178874613953,13.9492667461395 2.98245174613953,13.9241667461395 3.03704674613953,13.8876667461395 3.09164174613953,13.8511667461395 3.13807174613953,13.8047667461395 L 7.99999674613953,8.94280674613953 Z"/>
+                                </Border>
+                            </Grid>
+                            <PasswordBox
+								Height="36"
+								FontSize="14"
+								Margin="0,12,0,0"
+								BorderThickness="1"
+								Padding="8,0"
+                                Tag="密码"
+								Cursor="IBeam">
+                                <FrameworkElement.Style>
+                                    <Style
+										TargetType="{x:Type PasswordBox}">
+                                        <!--<Setter
+											Property="local:PasswordBoxMonitor.IsMonitoring"
+											Value="True" />-->
+                                        <Setter
+											Property="Template">
+                                            <Setter.Value>
+                                                <ControlTemplate
+													TargetType="{x:Type PasswordBox}">
+                                                    <Border
+														Name="border"
+														BorderBrush="#1A191919"
+														BorderThickness="1"
+														Background="#00FFFFFF"
+														CornerRadius="4">
+                                                        <Grid>
+                                                            <ScrollViewer
+																Name="PART_ContentHost"
+																Opacity="0.85"
+																VerticalAlignment="Center"
+																HorizontalAlignment="Left" />
+                                                            <TextBlock
+																Text="{TemplateBinding Tag}"
+																Visibility="Collapsed"
+																Style="{DynamicResource Body05}"
+																Foreground="#66191919"
+																Padding="10,0"
+																FontSize="{TemplateBinding FontSize}" />
+                                                        </Grid>
+                                                    </Border>
+                                                    <ControlTemplate.Triggers>
+                                                        <Trigger
+															Property="UIElement.IsFocused"
+															Value="True">
+                                                            <Setter
+																TargetName="border"
+																Property="BorderBrush"
+																Value="#894667CF" />
+                                                            <Setter
+																TargetName="border"
+																Property="Background"
+																Value="#0F2C4276" />
+                                                        </Trigger>
+                                                        <Trigger
+															Property="UIElement.IsFocused"
+															Value="False">
+                                                            <Setter
+																TargetName="border"
+																Property="BorderBrush"
+																Value="#1A191919" />
+                                                            <Setter
+																TargetName="border"
+																Property="Background"
+																Value="#00FFFFFF" />
+                                                        </Trigger>
+                                                        <!--<Trigger
+															Property="local:PasswordBoxMonitor.PasswordLength"
+															Value="0">
+                                                            <Setter
+																TargetName="hintText"
+																Property="Visibility"
+																Value="Visible" />
+                                                        </Trigger>-->
+                                                        <DataTrigger
+															Value="True"
+															Binding="{Binding ElementName=PasswordRemainderTimesText, Path=IsVisible}">
+                                                            <Setter
+																TargetName="border"
+																Property="BorderBrush"
+																Value="#FFFF0000" />
+                                                        </DataTrigger>
+                                                    </ControlTemplate.Triggers>
+                                                </ControlTemplate>
+                                            </Setter.Value>
+                                        </Setter>
+                                    </Style>
+                                </FrameworkElement.Style>
+                            </PasswordBox>
+                            <Grid
+								Margin="0,14,0,0">
+                                <Button
+									Height="36"
+                                    Content="登录"
+                                    cal:Message.Attach="LoIn"
+									Style="{StaticResource SaveButtonStyle}"
+									Background="#4B6FDE"/>
+                            </Grid>
+                            <Grid
+                                    Margin="0,8,0,0">
+                                <TextBlock
+                                        Text="忘记密码"
+                                        cal:Message.Attach="[MouseLeftButtonUp]=[ForgetPassword]"
+                                        FontSize="12"
+                                        Foreground="#66191919"
+                                        HorizontalAlignment="Left"
+                                        Cursor="Hand"
+                                        Background="#00FFFFFF"/>
+                                <TextBlock
+                                        Text="注册"
+                                        FontSize="12"
+                                        cal:Message.Attach="[MouseLeftButtonUp]=[CreateAccount]"
+                                        HorizontalAlignment="Right"
+                                        Foreground="#5B191919"
+                                        Cursor="Hand"
+                                        Background="#00FFFFFF"/>
+                            </Grid>
+                        </StackPanel>
+                    </Grid>
+                </Grid>
+            </Grid>
+        </Grid>
+    </Border>
+</Window>

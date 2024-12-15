@@ -1,0 +1,115 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:ControlToolKits.Controls"
+                    xmlns:i="http://schemas.microsoft.com/xaml/behaviors"
+                    xmlns:ssc="http://schemas.winrobot360.com/wpf/xaml/toolkit"
+                    xmlns:cal="http://www.caliburnproject.org"
+                    xmlns:sys="clr-namespace:System;assembly=mscorlib">
+    <Color x:Key="PrimaryPointsColor">#A8AFBF</Color>
+    <Color x:Key="SecondaryPointsColor">#f1f5ff</Color>
+    <SolidColorBrush x:Key="BasePointsBrush"
+                     Color="{StaticResource SecondaryPointsColor}"/>
+    <Style TargetType="{x:Type ListBoxItem}"
+           x:Key="CarouselItemStyle">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="ListBoxItem">
+                    <Grid Margin="5,0">
+                        <Ellipse x:Name="PART_Ellipse"
+                                     Width="8"
+                                     Height="8"
+                                     Fill="{StaticResource BasePointsBrush}" />
+                    </Grid>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver"
+                                     Value="True">
+                            <Trigger.EnterActions>
+                                <BeginStoryboard>
+                                    <Storyboard>
+                                        <ColorAnimation Storyboard.TargetName="PART_Ellipse"
+                                                                Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)"
+                                                                To="{StaticResource PrimaryPointsColor}"
+                                                                Duration="0:0:0.2"/>
+
+                                    </Storyboard>
+                                </BeginStoryboard>
+                            </Trigger.EnterActions>
+                            <Trigger.ExitActions>
+                                <BeginStoryboard>
+                                    <Storyboard>
+                                        <ColorAnimation Storyboard.TargetName="PART_Ellipse"
+                                                                Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)"
+                                                                Duration="0:0:0.2"/>
+
+                                    </Storyboard>
+                                </BeginStoryboard>
+                            </Trigger.ExitActions>
+                        </Trigger>
+                        <Trigger Property="IsSelected"
+                                     Value="True">
+                            <Trigger.EnterActions>
+                                <BeginStoryboard>
+                                    <Storyboard>
+                                        <ColorAnimation Storyboard.TargetName="PART_Ellipse"
+                                                                Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)"
+                                                                To="{StaticResource PrimaryPointsColor}"
+                                                                Duration="0:0:0.2"/>
+
+                                    </Storyboard>
+                                </BeginStoryboard>
+                            </Trigger.EnterActions>
+                            <Trigger.ExitActions>
+                                <BeginStoryboard>
+                                    <Storyboard>
+                                        <ColorAnimation Storyboard.TargetName="PART_Ellipse"
+                                                                Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)"
+                                                                Duration="0:0:0.2"/>
+
+                                    </Storyboard>
+                                </BeginStoryboard>
+                            </Trigger.ExitActions>
+                        </Trigger>
+
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <Style TargetType="{x:Type local:CarouselControl}">
+        <Setter Property="ItemContainerStyle"
+                Value="{StaticResource CarouselItemStyle}"/>
+        <Setter Property="Padding"
+                Value="0,0,0,10"/>
+        <Setter Property="HorizontalContentAlignment"
+                Value="Center"/>
+        <Setter Property="VerticalContentAlignment"
+                Value="Bottom"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type local:CarouselControl}">
+                    <Grid ClipToBounds="True">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+                        <ContentControl x:Name="PART_NextContent" />
+                        <ContentControl x:Name="PART_CurrentContent" />
+                        <Border Name="Border"
+                                Grid.Row="1"
+                                BorderThickness="0"
+                                Background="Transparent"
+                                HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                                Margin="{TemplateBinding Padding}"
+                                CornerRadius="0">
+                            <ScrollViewer Focusable="false">
+                                <StackPanel Orientation="Horizontal"
+                                            IsItemsHost="True" />
+                            </ScrollViewer>
+                        </Border>
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+</ResourceDictionary>

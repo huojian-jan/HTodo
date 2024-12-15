@@ -1,0 +1,20 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <Color x:Key="ColorPrimary">#FF282B35</Color>
+  <Color x:Key="MainWindow">#FF282B35</Color>
+  <Color x:Key="ItemHover">#14737375</Color>
+  <Color x:Key="ItemSelected">#28697084</Color>
+  <Color x:Key="ProjectHoverColor">#09FFFFFF</Color>
+  <SolidColorBrush x:Key="ProjectSelectedBackground" Color="{StaticResource white_08}"/>
+  <SolidColorBrush x:Key="TextBoxBackground" Color="#737375" Opacity="0.08"/>
+  <SolidColorBrush x:Key="TopGridColor" Color="{DynamicResource ColorPrimary}" Opacity="0.9"/>
+  <SolidColorBrush x:Key="TimelineContainerBackground" Color="White"/>
+  <Color x:Key="TimelineContainerBackgroundColor">White</Color>
+  <Color x:Key="TimelineContainerBackgroundStepToColor">Transparent</Color>
+  <SolidColorBrush x:Key="PrimaryColor" Color="{DynamicResource ColorPrimary}"/>
+  <SolidColorBrush x:Key="DateColorPrimary" Color="{DynamicResource primary_blue_100}"/>
+  <SolidColorBrush x:Key="TextAccentColor" Color="{DynamicResource primary_blue_100}"/>
+  <Color x:Key="LeftBarBackColorTop">#191919</Color>
+  <Color x:Key="LeftBarBackColorBottom">#191919</Color>
+  <SolidColorBrush x:Key="ProjectSectionColor" Color="{DynamicResource ProjectMenuBaseColor}" Opacity="0.4"/>
+</ResourceDictionary>

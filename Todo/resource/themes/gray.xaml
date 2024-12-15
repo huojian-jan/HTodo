@@ -1,0 +1,28 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <Color x:Key="ColorPrimary">#FF313643</Color>
+  <Color x:Key="MainWindow">#FFE5E5E5</Color>
+  <Color x:Key="ItemHover">#145D626F</Color>
+  <Color x:Key="ItemSelected">#28313643</Color>
+  <Color x:Key="ProjectHoverColor">#0F313643</Color>
+  <Color x:Key="ProjectMenuBaseColor">#313643</Color>
+  <SolidColorBrush x:Key="ProjectSelectedBackground" Color="#313643" Opacity="0.1"/>
+  <SolidColorBrush x:Key="TextBoxBackground" Color="#5D626F" Opacity="0.08"/>
+  <SolidColorBrush x:Key="PrimaryColor" Color="{DynamicResource ColorPrimary}"/>
+  <SolidColorBrush x:Key="TextAccentColor" Color="{DynamicResource ColorPrimary}"/>
+  <SolidColorBrush x:Key="BatchSelectBackground" Color="{DynamicResource black_02}"/>
+  <SolidColorBrush x:Key="KanbanContainerColor" Color="{DynamicResource ColorPrimary}" Opacity="0.1"/>
+  <SolidColorBrush x:Key="MatrixContainerColor" Color="{DynamicResource ColorPrimary}" Opacity="0.1"/>
+  <SolidColorBrush x:Key="ShowAreaBackground" Color="White"/>
+  <SolidColorBrush x:Key="TimelineContainerBackground" Color="White"/>
+  <Color x:Key="TimelineContainerBackgroundColor">White</Color>
+  <Color x:Key="TimelineContainerBackgroundStepToColor">Transparent</Color>
+  <SolidColorBrush x:Key="ProjectIconTextColor" Color="{DynamicResource MainWindow}"/>
+  <SolidColorBrush x:Key="ProjectMenuIconColor" Color="{DynamicResource ProjectMenuBaseColor}" Opacity="0.4"/>
+  <Color x:Key="LeftBarBackColorTop">#474747</Color>
+  <Color x:Key="LeftBarBackColorBottom">#474747</Color>
+  <SolidColorBrush x:Key="ProjectSectionColor" Color="{DynamicResource ProjectMenuBaseColor}" Opacity="0.4"/>
+  <SolidColorBrush x:Key="WindowBorderBackground" Color="{DynamicResource black_20}"/>
+  <SolidColorBrush x:Key="DateColorPrimary" Color="{DynamicResource primary_blue_100}"/>
+  <SolidColorBrush x:Key="CalendarButtonSelectedColor" Color="{DynamicResource ColorPrimary}" Opacity="0.15"/>
+</ResourceDictionary>

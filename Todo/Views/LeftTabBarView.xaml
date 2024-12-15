@@ -1,0 +1,121 @@
+﻿<UserControl x:Class="Todo.Views.LeftTabBarView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:cal="http://www.caliburnproject.org"
+             xmlns:conv="clr-namespace:Todo.Conveter"
+             xmlns:local="clr-namespace:Todo.Views"
+             mc:Ignorable="d" >
+    <UserControl.Resources>
+        <conv:LeftTabBarButtonBrushConverter x:Key="LeftTabBarButtonBrushConverter"/>
+        <DataTemplate x:Key="TabBarItem">
+            <Border Height="48"
+                    Background="Transparent"
+                    Width="50"
+                    Name="TabItem"
+                    BorderThickness="0"
+                    BorderBrush="Transparent"
+                    ToolTip="{Binding ToolTips}"
+                    cal:Message.Attach="[MouseLeftButtonDown]=[ActiveItemChanged($dataContext)]">
+                <Path                                  
+                                VerticalAlignment="Center"
+                                HorizontalAlignment="Center"
+                                Fill="{Binding IsActive,UpdateSourceTrigger=PropertyChanged,Converter={StaticResource LeftTabBarButtonBrushConverter}}"
+                                Data="{Binding Icon}">
+                </Path>
+                <Border.Style>
+                    <Style TargetType="Border">
+                        <Setter Property="Opacity" Value="0.4"/>
+                        <Style.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Path.Opacity" Value="0.6"/>
+                                <Setter Property="Background"  Value="Transparent"/>
+                            </Trigger>
+                            <Trigger Property="IsMouseOver" Value="False">
+                                <Setter Property="Path.Opacity" Value="0.4"/>
+                            </Trigger>
+                            <DataTrigger Binding="{Binding IsActive }" Value="True">
+                                <Setter Property="Path.Opacity" Value="1"/>
+                            </DataTrigger>
+                        </Style.Triggers>
+                    </Style>
+                </Border.Style>
+            </Border>
+        </DataTemplate>
+
+        <DataTemplate x:Key="TabBarFunctionItem">
+            <Border Height="48"
+                    Background="Transparent"
+                    Width="50"
+                    Name="TabItem"
+                    BorderThickness="0"
+                    BorderBrush="Transparent"
+                    ToolTip="{Binding ToolTips}"
+                    cal:Message.Attach="[MouseLeftButtonDown]=[ActiveItemChanged($dataContext,$eventArgs)]">
+                <Path    x:Name="ButtonPath"                              
+                         VerticalAlignment="Center"
+                         HorizontalAlignment="Center"
+                         RenderTransformOrigin="0.5,0.5"
+                         UseLayoutRounding="False"
+                         Tag="{Binding IsRotate,UpdateSourceTrigger=PropertyChanged}"
+                         Fill="#FF191919"
+                         Data="{Binding Icon}">
+                    <Path.RenderTransform>
+                        <RotateTransform x:Name="RotateTransform"/>
+                    </Path.RenderTransform>
+                    <Path.Style>
+                        <Style>
+                            <Style.Resources>
+                                <Storyboard x:Key="RotateStoryboard">
+                                    <DoubleAnimation  From="0" Duration="0:0:01" AutoReverse="False" To="540" Storyboard.TargetProperty="(UIElement.RenderTransform).Angle"/>
+                                </Storyboard>
+                            </Style.Resources>
+                            <Style.Triggers> 
+                                <DataTrigger Binding="{Binding Path=Tag,Mode=TwoWay,RelativeSource={RelativeSource Self}}" Value="True">
+                                    <DataTrigger.EnterActions >
+                                        <BeginStoryboard Storyboard="{StaticResource RotateStoryboard}"/>
+                                    </DataTrigger.EnterActions>
+                                </DataTrigger>
+                            </Style.Triggers>
+                        </Style>
+                    </Path.Style>
+                </Path>
+                <Border.Style>
+                    <Style TargetType="Border">
+                        <Setter Property="Opacity" Value="0.4"/>
+                        <Style.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Path.Opacity" Value="0.6"/>
+                                <Setter Property="Background"  Value="Transparent"/>
+                            </Trigger>
+                            <Trigger Property="IsMouseOver" Value="False">
+                                <Setter Property="Path.Opacity" Value="0.4"/>
+                            </Trigger>
+                        </Style.Triggers>
+                    </Style>
+                </Border.Style>
+            </Border>
+        </DataTemplate>
+
+    </UserControl.Resources>
+    <Border>
+        <Grid Background="#f1f4ff">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Image
+                   Width="32"
+                   Height="32"
+                   Source="pack://application:,,,/Todo.Asset;component/Jpg/avatar.jpg"/>
+
+            <ItemsControl Grid.Row="1" ItemsSource="{Binding LeftBarButtons }" ItemTemplate="{StaticResource TabBarItem}">
+            </ItemsControl>
+            <Border  Grid.Row="2"/>
+            <ItemsControl Grid.Row="3" ItemsSource="{Binding FunctionButtons}" ItemTemplate="{StaticResource TabBarFunctionItem}"/>
+        </Grid>
+    </Border>
+</UserControl>

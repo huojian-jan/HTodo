@@ -1,0 +1,54 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:sys="clr-namespace:System;assembly=mscorlib">
+  <sys:String x:Key="PublicTickTick">滴答清單</sys:String>
+  <sys:String x:Key="Copyright1">版權所有©2023 滴答清單團隊</sys:String>
+  <sys:String x:Key="LoginTitle">登錄到滴答清單</sys:String>
+  <sys:String x:Key="ReminderForSubTasksProSummary">
+    升級到高級會員，為檢查事項添加提醒，即便是一個小小的執行步驟也不會忘記。如果您使用滴答清單來做簡單的項目管理，那麽也可以設置檢查事項提醒來明確每一個執行步驟的截止日期。
+  </sys:String>
+  <sys:String x:Key="PremiumThemesProSummary">
+    滴答清單希望您每天都有美妙的心情，除了實用的功能和流暢的體驗，也為您帶來了新鮮好看的會員專享主題。
+  </sys:String>
+  <sys:String x:Key="PomoSoundProSummary">
+    滴答清單希望幫助您在每一個蕃茄工作時間中，都更加專注。為此我們帶來了好聽的蕃茄背景音，為您營造舒適而集中的工作環境。
+  </sys:String>
+  <sys:String x:Key="CancelSubscribeMessage">
+    取消訂閱後將不在滴答清單中顯示這個日曆中的事件，確認取消？
+  </sys:String>
+  <sys:String x:Key="UnlockTickTick">解鎖滴答清單</sys:String>
+  <sys:String x:Key="TrySetPasswordHint">
+    您正在嘗試鎖定滴答清單，鎖定前請先設置解鎖密碼。
+  </sys:String>
+  <sys:String x:Key="ForgetAndResetPasswordHint">
+    如您忘記了登錄密碼，可選擇重置。點擊“確定”後，您將暫時登出 Windows 應用，滴答清單會在瀏覽器中為您打開“重置密碼頁面”，請您根據步驟重置登錄密碼。下次登錄成功後即可重新設置解鎖密碼。
+  </sys:String>
+  <sys:String x:Key="LockApp">鎖定滴答清單</sys:String>
+  <sys:String x:Key="UnLockApp">解鎖滴答清單</sys:String>
+  <sys:String x:Key="WidgetTutorial">
+    請在系統托盤右鍵滴答清單圖標以添加桌面小部件，目前滴答清單支持兩種小部件類型：
+  </sys:String>
+  <sys:String x:Key="NewVersionPre">滴答清單 Windows</sys:String>
+  <sys:String x:Key="NewVersionCenter">版本可供更新，你現在使用的是</sys:String>
+  <sys:String x:Key="UpdatingTickTick">更新滴答清單</sys:String>
+  <sys:String x:Key="TeamOutDateText">
+    抱歉，你的團隊已到期。你將無法繼續在團隊 "{0}" 的清單內添加、編輯任務，但你仍然可以查看現有的任務。如需繼續與團隊 "{0}" 內的成員協作，請及時前往網頁端團隊後臺續費。
+  </sys:String>
+  <sys:String x:Key="TeamsOutDateText">
+    抱歉，你的團隊 {0} 已到期。你將無法繼續在這些團隊的清單內添加、編輯任務，但你仍然可以查看現有的任務。如需繼續與這些團隊內的成員協作，請及時前往團隊後臺續費。
+  </sys:String>
+  <sys:String x:Key="TransferNotTeamAccount">
+    抱歉，無法轉讓給 {0}。你的清單已超過 29 名成員，但 {0} 不是團隊用戶。
+  </sys:String>
+  <sys:String x:Key="TeamPayReminder">
+    團隊 "{0}" 將於 {1} 到期，請及時前往網頁端團隊後臺續費。
+  </sys:String>
+  <sys:String x:Key="TeamMemberCountLimitText">
+    團隊 "{0}" 的成員名額數已滿，請前往網頁端團隊後臺為團隊擴容後，再同意新成員加入。
+  </sys:String>
+  <sys:String x:Key="UsingBusiness">你正在使用團隊高級會員：{0} 到期</sys:String>
+  <sys:String x:Key="TeamExpiredOperate">團隊已失效，無法進行操作</sys:String>
+  <sys:String x:Key="EnableHabitText">
+    在滴答清單中添加想要養成的習慣，並追踪每個習慣的打卡數據。
+  </sys:String>
+</ResourceDictionary>

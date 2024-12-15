@@ -1,0 +1,7 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <SolidColorBrush x:Key="TaskItemHoverColor" Color="{DynamicResource ColorPrimary}" Opacity="0.08"/>
+  <SolidColorBrush x:Key="TaskDragBorderColor" Color="{DynamicResource ColorPrimary}" Opacity="0.16"/>
+  <SolidColorBrush x:Key="ItemHoverColor" Color="{DynamicResource ItemHover}"/>
+  <SolidColorBrush x:Key="ItemSelectedColor" Color="{DynamicResource ItemSelected}"/>
+</ResourceDictionary>

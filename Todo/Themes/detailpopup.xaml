@@ -1,0 +1,8 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:system="clr-namespace:System;assembly=mscorlib">
+  <Thickness x:Key="ReminderPanelMargin">33,32,10,0</Thickness>
+  <Thickness x:Key="RightIconPanelMargin">0</Thickness>
+  <Thickness x:Key="ImageLeftMargin">40,0,0,0</Thickness>
+  <Thickness x:Key="DetailContentMargin">20,0,20,0</Thickness>
+</ResourceDictionary>

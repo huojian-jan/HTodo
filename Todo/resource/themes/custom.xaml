@@ -1,0 +1,11 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <Color x:Key="MainWindow">#000000</Color>
+  <Color x:Key="ProjectHoverColor">#1AFFFFFF</Color>
+  <SolidColorBrush x:Key="MainBackground" Color="#000000"/>
+  <SolidColorBrush x:Key="ProjectSelectedBackground" Color="#33FFFFFF"/>
+  <SolidColorBrush x:Key="TextBoxBackground" Color="#000000" Opacity="0.04"/>
+  <SolidColorBrush x:Key="ProjectMenuBackGround" Color="#1A000000"/>
+  <SolidColorBrush x:Key="KanbanContainerColor" Color="Transparent"/>
+  <SolidColorBrush x:Key="MatrixContainerColor" Color="Transparent"/>
+</ResourceDictionary>

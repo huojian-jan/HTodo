@@ -1,0 +1,19 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:system="clr-namespace:System;assembly=mscorlib">
+  <Color x:Key="ColorPrimary">#0172CE</Color>
+  <Color x:Key="MainWindow">#FFF2F5FE</Color>
+  <Color x:Key="ItemHover">#140172CE</Color>
+  <Color x:Key="ItemSelected">#280172CE</Color>
+  <Color x:Key="ProjectHoverColor">#1A0172CE</Color>
+  <Color x:Key="ProjectMenuBaseColor">#191919</Color>
+  <SolidColorBrush x:Key="ProjectSelectedBackground" Color="#330172CE"/>
+  <SolidColorBrush x:Key="TextBoxBackground" Color="#191919" Opacity="0.08"/>
+  <SolidColorBrush x:Key="PrimaryColor" Color="{DynamicResource ColorPrimary}"/>
+  <Color x:Key="LeftBarBackColorTop">#CC5793C7</Color>
+  <Color x:Key="LeftBarBackColorBottom">#CC5793C7</Color>
+  <SolidColorBrush x:Key="ProjectMenuIconColor" Color="{DynamicResource ProjectMenuBaseColor}" Opacity="0.4"/>
+  <SolidColorBrush x:Key="ProjectSectionColor" Color="{DynamicResource ProjectMenuBaseColor}" Opacity="0.4"/>
+  <SolidColorBrush x:Key="ShowAreaBackground" Color="{DynamicResource white_80}"/>
+  <system:Double x:Key="ProjectShadowOpacity">0.15</system:Double>
+</ResourceDictionary>

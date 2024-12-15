@@ -1,0 +1,60 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:sys="clr-namespace:System;assembly=mscorlib">
+  <sys:String x:Key="PublicTickTick">Dida</sys:String>
+  <sys:String x:Key="Copyright1">© 2023 DIDA Team</sys:String>
+  <sys:String x:Key="LoginTitle">Login</sys:String>
+  <sys:String x:Key="ReminderForSubTasksProSummary">
+    Upgrade to Premium, set up reminders for checkitems and get reminded separately, never miss a tiny step.
+  </sys:String>
+  <sys:String x:Key="PremiumThemesProSummary">
+    DIDA premium users can have more theme options to choose from. With these fascinating themes, you will be more pleased when organizing your daily plans.
+  </sys:String>
+  <sys:String x:Key="PomoSoundProSummary">
+    You can set up a white noise during a Pomo. Boost up your productivity and develop your skills to focus longer.
+  </sys:String>
+  <sys:String x:Key="CancelSubscribeMessage">
+    Events from this calendar will not appear in DIDA. Sure to unsubscribe?
+  </sys:String>
+  <sys:String x:Key="UnlockTickTick">Unlock DIDA</sys:String>
+  <sys:String x:Key="TrySetPasswordHint">
+    Please setup a password before trying to lock DIDA
+  </sys:String>
+  <sys:String x:Key="ForgetAndResetPasswordHint">
+    If you forgot the unlock password, click “Confirm” and you will be automatically logged out. DIDA will then open a “Reset Password” page in your browser, please follow the instruction to reset a password.
+  </sys:String>
+  <sys:String x:Key="LockApp">Lock DIDA</sys:String>
+  <sys:String x:Key="UnLockApp">Unlock DIDA</sys:String>
+  <sys:String x:Key="WidgetTutorial">
+    Please add a new widget by right-clicking the app icon in system tray and make your selection. DIDA currently supports two different widgets.
+  </sys:String>
+  <sys:String x:Key="NewVersionPre">The version</sys:String>
+  <sys:String x:Key="NewVersionCenter">
+    for DIDA Windows is available, you're using version
+  </sys:String>
+  <sys:String x:Key="UpdatingTickTick">Updating DIDA</sys:String>
+  <sys:String x:Key="TeamOutDateText">
+    Sorry, your team has expired. You can no longer add or edit any tasks in team "{0}" while you can still view these tasks. If you want to continue working with your teammates from team "{0}", please go to the DIDA Business admin page on the web and renew the Premium plan.
+  </sys:String>
+  <sys:String x:Key="TeamsOutDateText">
+    Sorry, your team {0} have expired. You can no longer add or edit any tasks in these teams while you can still view these tasks. If you want to continue working with your teammates from these teams, please go to the DIDA Business admin page on the web and renew the Premium plan.
+  </sys:String>
+  <sys:String x:Key="TransferNotTeamAccount">
+    Sorry, transferring to {0} cannot be done. There are more than 29 members in this list, but {0} is not on DIDA Business service.
+  </sys:String>
+  <sys:String x:Key="TeamPayReminder">
+    Your team "{0}" will be expired on {1}. Please renew it on the DIDA Business admin page on the web.
+  </sys:String>
+  <sys:String x:Key="TeamMemberCountLimitText">
+    You have filled the quota of teammates for team "{0}". Please go to the DIDA Business admin page on the web and expand the team before you invite more teammates.
+  </sys:String>
+  <sys:String x:Key="UsingBusiness">
+    You're using DIDA Business: Expires on {0}
+  </sys:String>
+  <sys:String x:Key="TeamExpiredOperate">
+    DIDA Business has expired. Failed to proceed.
+  </sys:String>
+  <sys:String x:Key="EnableHabitText">
+    Create and stick to your new habits in DIDA, and keep track of your habit stats.
+  </sys:String>
+</ResourceDictionary>

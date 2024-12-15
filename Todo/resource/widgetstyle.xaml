@@ -1,0 +1,22 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <SolidColorBrush x:Key="project_text_color_1" Color="White"/>
+  <SolidColorBrush x:Key="project_text_color_2" Color="White"/>
+  <SolidColorBrush x:Key="project_text_color_3" Color="White"/>
+  <SolidColorBrush x:Key="project_text_color_4" Color="White"/>
+  <SolidColorBrush x:Key="project_text_color_5" Color="White"/>
+  <SolidColorBrush x:Key="project_text_color_6" Color="White"/>
+  <SolidColorBrush x:Key="project_text_color_7" Color="White"/>
+  <SolidColorBrush x:Key="project_text_color_8" Color="White"/>
+  <SolidColorBrush x:Key="project_text_color_9" Color="White"/>
+  <SolidColorBrush x:Key="project_text_color_10" Color="White"/>
+  <SolidColorBrush x:Key="project_text_color_11" Color="White"/>
+  <SolidColorBrush x:Key="project_text_color_12" Color="White"/>
+  <SolidColorBrush x:Key="project_text_color_13" Color="White"/>
+  <SolidColorBrush x:Key="project_text_color_14" Color="White"/>
+  <SolidColorBrush x:Key="project_text_color_15" Color="White"/>
+  <SolidColorBrush x:Key="project_text_color_16" Color="White"/>
+  <SolidColorBrush x:Key="project_text_color_17" Color="White"/>
+  <SolidColorBrush x:Key="project_text_color_18" Color="White"/>
+  <SolidColorBrush x:Key="project_text_color_19" Color="White"/>
+</ResourceDictionary>

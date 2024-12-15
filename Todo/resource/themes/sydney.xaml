@@ -1,0 +1,17 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:system="clr-namespace:System;assembly=mscorlib">
+  <Color x:Key="ColorPrimary">#353379</Color>
+  <Color x:Key="MainWindow">#FF1D1D2F</Color>
+  <Color x:Key="ItemHover">#141C215D</Color>
+  <Color x:Key="ItemSelected">#282E49C7</Color>
+  <Color x:Key="ProjectHoverColor">#1AFFFFFF</Color>
+  <SolidColorBrush x:Key="ProjectSelectedBackground" Color="#33FFFFFF"/>
+  <SolidColorBrush x:Key="TextBoxBackground" Color="#1C215D" Opacity="0.08"/>
+  <SolidColorBrush x:Key="PrimaryColor" Color="{DynamicResource ColorPrimary}"/>
+  <SolidColorBrush x:Key="DateColorPrimary" Color="{DynamicResource primary_blue_100}"/>
+  <SolidColorBrush x:Key="TextAccentColor" Color="{DynamicResource primary_blue_100}"/>
+  <Color x:Key="LeftBarBackColorTop">#CC00003E</Color>
+  <Color x:Key="LeftBarBackColorBottom">#CC00003E</Color>
+  <system:Double x:Key="ProjectShadowOpacity">0.3</system:Double>
+</ResourceDictionary>
