@@ -35,7 +35,7 @@ namespace WPF.Common.Extentions
 
             var border = new Border();
             border.CornerRadius = new CornerRadius(8, 8, 8, 8);
-            border.Effect = effect;
+            //border.Effect = effect;
             var content = new ContentControl();
             var viewTypeName = dataContext.GetType().Name.Replace("ViewModel", "View");
             var viewType = dataContext.GetType().Assembly.GetTypes().FirstOrDefault(x => x.Name == viewTypeName);
@@ -48,8 +48,9 @@ namespace WPF.Common.Extentions
             border.Child = content;
             border.BorderThickness = new Thickness(1);
             border.CornerRadius = new CornerRadius(8);
+            border.Background = new SolidColorBrush(Colors.Transparent);
             border.BorderBrush = new SolidColorBrush(Colors.White);
-            border.Padding = new Thickness(3);
+            //border.Padding = new Thickness(3);
             _window.Background = new SolidColorBrush(Colors.Transparent);
             _window.Content = border;
             _window.ApplySettings(viewSettings);
